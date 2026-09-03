@@ -1,0 +1,1 @@
+export default function Loading(){return <div className="container section"><div className="grid" aria-label="جارٍ تحميل البرامج">{[1,2,3].map(x=><div className="program-card" key={x}><div className="placeholder"/><div className="card-body"><div style={{height:24,background:"#eef2ef",borderRadius:8}}/></div></div>)}</div></div>}

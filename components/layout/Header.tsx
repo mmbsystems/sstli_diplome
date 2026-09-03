@@ -1,0 +1,2 @@
+import Image from "next/image";import Link from "next/link";
+export default function Header(){return <header className="header"><div className="container header-inner"><Link href="/" className="brand" aria-label="الرئيسية"><Image src="/sstli_logo.jpg" width={100} height={100} alt="شعار المعهد" priority/><span>المعهد السعودي المتخصص العالي للتدريب</span></Link><nav className="nav" aria-label="التنقل الرئيسي"><Link href="/">الرئيسية</Link><Link href="/programs">البرامج</Link><Link className="primary-btn" href="/programs">استكشف البرامج</Link></nav></div></header>}

@@ -1,0 +1,1 @@
+import Link from "next/link";export default function NotFound(){return <div className="container section"><div className="empty"><strong>لم نجد هذه الصفحة</strong><p>قد يكون رابط البرنامج قد تغيّر أو لم يعد متاحًا.</p><Link className="primary-btn" href="/programs">العودة إلى البرامج</Link></div></div>}

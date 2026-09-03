@@ -1,0 +1,3 @@
+import type { FilterOptions, Offering, Program, ProgramCategory, StudyMode } from "@/types/program";
+export function filterPrograms(programs:Program[],offerings:Offering[],filters:FilterOptions){return programs.filter(p=>p.category===filters.category).map(program=>({program,offerings:offerings.filter(o=>o.programId===program.id&&o.active&&o.studyMode===filters.studyMode&&(!filters.city||o.city===filters.city))})).filter(x=>x.offerings.length>0)}
+export function getAvailableCities(offerings:Offering[],category:ProgramCategory,studyMode:StudyMode,programs:Program[]){const ids=new Set(programs.filter(p=>p.category===category).map(p=>p.id));return [...new Set(offerings.filter(o=>o.active&&o.studyMode===studyMode&&ids.has(o.programId)&&o.city).map(o=>o.city!))];}
