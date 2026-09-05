@@ -1,3 +1,301 @@
-"use client";import {useMemo,useState} from "react";import Link from "next/link";import {BadgeCheck,BookOpen,Clock3,MapPin,Users} from "lucide-react";import type {Offering,Program} from "@/types/program";import {categoryLabel,formatCurrency,genderLabel,modeLabel} from "@/lib/formatters";import ProgramImage from "@/components/programs/ProgramImage";import InstallmentCalculator from "./InstallmentCalculator";
-export default function ProgramDetails({program,available,initialMode,initialCity}:{program:Program;available:Offering[];initialMode?:string;initialCity?:string}){const initial=available.find(o=>o.studyMode===initialMode&&(!initialCity||o.city===initialCity))||available[0];const [offeringId,setOfferingId]=useState(initial?.id);const offering=useMemo(()=>available.find(o=>o.id===offeringId)||available[0],[available,offeringId]);if(!offering)return <div className="container section"><div className="empty"><strong>لا يتوفر هذا البرنامج حاليًا</strong>راجع صفحة البرامج للاطلاع على الخيارات المتاحة.</div></div>;const accreditedHours=offering.accreditedHours??program.accreditedHours;
-return <><section className="detail-hero"><div className="container"><nav className="breadcrumb" aria-label="مسار الصفحة"><Link href="/">الرئيسية</Link> / <Link href="/programs">البرامج</Link> / <span>{program.name}</span></nav><div className="detail-grid"><div><ProgramImage name={program.name} image={program.image} className="detail-image" priority/><div className="badges detail-badges"><span className="badge">{categoryLabel[program.category]}</span><span className="badge neutral">{modeLabel[offering.studyMode]}</span>{offering.city&&<span className="badge neutral">{offering.city}</span>}</div><h1 className="detail-title">{program.name}</h1><p className="prose">{program.description}</p><div className="info-strip"><div className="info-item"><Clock3 size={20}/><small>مدة البرنامج</small><strong>{program.duration.standard||program.duration.label}</strong>{program.duration.withSummerTerm&&<small>تُختصر إلى {program.duration.withSummerTerm} بالترم الصيفي</small>}</div><div className="info-item"><BookOpen size={20}/><small>{program.category==="diploma"?"الساعات المعتمدة":"الساعات التدريبية"}</small><strong>{accreditedHours?`${accreditedHours} ساعة`:"قيد التحديث"}</strong></div><div className="info-item"><BadgeCheck size={20}/><small>نوع الشهادة</small><strong>{program.category==="development-course"?"شهادة حضور":program.category==="qualifying-course"?"شهادة اجتياز":"دبلوم"}</strong></div></div>{program.contentPending&&<div className="notice">تفاصيل دبلوم المحاسبة الكاملة قيد التحديث، ولم تتم إضافة معلومات غير مؤكدة.</div>}{program.curriculum?.length?<section className="content-section"><h2>مقررات التخصص</h2><ul className="list-grid">{program.curriculum.map(x=><li key={x}>{x}</li>)}</ul></section>:null}{program.careerPaths?.length?<section className="content-section"><h2>ماذا يؤهلك له البرنامج؟</h2><ul className="list-grid">{program.careerPaths.map(x=><li key={x}>{x}</li>)}</ul></section>:null}</div><aside className="aside"><div className="panel"><h2 style={{marginTop:0}}>خيار الدراسة</h2><div className="field"><label htmlFor="offering">الفرع وطريقة الدراسة</label><select id="offering" className="select" value={offering.id} onChange={e=>setOfferingId(e.target.value)}>{available.map(o=><option key={o.id} value={o.id}>{modeLabel[o.studyMode]}، {o.city}{o.branch?`، ${o.branch}`:""}</option>)}</select></div><div className="meta"><span><MapPin size={18}/>{offering.studyMode==="online"?`الفرع الإداري: ${offering.branch||offering.city}`:`${offering.city}، ${offering.branch}`}</span><span><Users size={18}/>{genderLabel[offering.gender||"both"]}</span></div><div className="price-box"><small>إجمالي الرسوم</small><strong>{offering.price===undefined?"قيد التأكيد":formatCurrency(offering.price)}</strong></div>{offering.price===undefined&&<p className="notice">لم يُعتمد السعر في المصدر الحالي. تواصل مع المعهد للتأكد.</p>}<Link href="/programs" className="primary-btn" style={{width:"100%"}}>العودة إلى البرامج</Link></div>{program.category==="diploma"&&offering.price!==undefined&&offering.minDownPayment!==undefined&&<InstallmentCalculator price={offering.price} min={offering.minDownPayment} installments={offering.installments}/>}</aside></div></div></section><div className="sticky-mobile"><Link href="/programs" className="primary-btn">استكشف برنامجًا آخر</Link></div></>}
+"use client";
+
+import { useMemo, useState } from "react";
+import Link from "next/link";
+import {
+  BadgeCheck,
+  BookOpen,
+  Clock3,
+  MapPin,
+  Users,
+} from "lucide-react";
+
+import type { Offering, Program } from "@/types/program";
+import {
+  categoryLabel,
+  formatCurrency,
+  genderLabel,
+  modeLabel,
+} from "@/lib/formatters";
+
+import ProgramImage from "@/components/programs/ProgramImage";
+import InstallmentCalculator from "./InstallmentCalculator";
+
+export default function ProgramDetails({
+  program,
+  available,
+}: {
+  program: Program;
+  available: Offering[];
+}) {
+  const [offeringId, setOfferingId] = useState(
+    available[0]?.id ?? ""
+  );
+
+  const offering = useMemo(() => {
+    return (
+      available.find((item) => item.id === offeringId) ||
+      available[0]
+    );
+  }, [available, offeringId]);
+
+  if (!offering) {
+    return (
+      <div className="container section">
+        <div className="empty">
+          <strong>لا يتوفر هذا البرنامج حاليًا</strong>
+          <p>راجع صفحة البرامج للاطلاع على الخيارات المتاحة.</p>
+        </div>
+      </div>
+    );
+  }
+
+  const accreditedHours =
+    offering.accreditedHours ?? program.accreditedHours;
+
+  return (
+    <>
+      <section className="detail-hero">
+        <div className="container">
+          <nav className="breadcrumb" aria-label="مسار الصفحة">
+            <Link href="/">الرئيسية</Link>
+            {" / "}
+            <Link href="/programs">البرامج</Link>
+            {" / "}
+            <span>{program.name}</span>
+          </nav>
+
+          <div className="detail-grid">
+            <div>
+              <ProgramImage
+                name={program.name}
+                image={program.image}
+                className="detail-image"
+                priority
+              />
+
+              <div className="badges detail-badges">
+                <span className="badge">
+                  {categoryLabel[program.category]}
+                </span>
+
+                <span className="badge neutral">
+                  {modeLabel[offering.studyMode]}
+                </span>
+
+                {offering.city && (
+                  <span className="badge neutral">
+                    {offering.city}
+                  </span>
+                )}
+              </div>
+
+              <h1 className="detail-title">
+                {program.name}
+              </h1>
+
+              <p className="prose">
+                {program.description}
+              </p>
+
+              <div className="info-strip">
+                <div className="info-item">
+                  <Clock3 size={20} />
+
+                  <small>مدة البرنامج</small>
+
+                  <strong>
+                    {program.duration.standard ||
+                      program.duration.label}
+                  </strong>
+
+                  {program.duration.withSummerTerm && (
+                    <small>
+                      تُختصر إلى{" "}
+                      {program.duration.withSummerTerm} بالترم
+                      الصيفي
+                    </small>
+                  )}
+                </div>
+
+                <div className="info-item">
+                  <BookOpen size={20} />
+
+                  <small>
+                    {program.category === "diploma"
+                      ? "الساعات المعتمدة"
+                      : "الساعات التدريبية"}
+                  </small>
+
+                  <strong>
+                    {accreditedHours
+                      ? `${accreditedHours} ساعة`
+                      : "قيد التحديث"}
+                  </strong>
+                </div>
+
+                <div className="info-item">
+                  <BadgeCheck size={20} />
+
+                  <small>نوع الشهادة</small>
+
+                  <strong>
+                    {program.category ===
+                      "development-course"
+                      ? "شهادة حضور"
+                      : program.category ===
+                        "qualifying-course"
+                        ? "شهادة اجتياز"
+                        : "دبلوم"}
+                  </strong>
+                </div>
+              </div>
+
+              {program.contentPending && (
+                <div className="notice">
+                  تفاصيل دبلوم المحاسبة الكاملة قيد
+                  التحديث، ولم تتم إضافة معلومات غير
+                  مؤكدة.
+                </div>
+              )}
+
+              {program.curriculum?.length ? (
+                <section className="content-section">
+                  <h2>مقررات التخصص</h2>
+
+                  <ul className="list-grid">
+                    {program.curriculum.map((item) => (
+                      <li key={item}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              ) : null}
+
+              {program.careerPaths?.length ? (
+                <section className="content-section">
+                  <h2>ماذا يؤهلك له البرنامج؟</h2>
+
+                  <ul className="list-grid">
+                    {program.careerPaths.map((item) => (
+                      <li key={item}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              ) : null}
+            </div>
+
+            <aside className="aside">
+              <div className="panel">
+                <h2 style={{ marginTop: 0 }}>
+                  خيار الدراسة
+                </h2>
+
+                <div className="field">
+                  <label htmlFor="offering">
+                    الفرع وطريقة الدراسة
+                  </label>
+
+                  <select
+                    id="offering"
+                    className="select"
+                    value={offering.id}
+                    onChange={(event) =>
+                      setOfferingId(event.target.value)
+                    }
+                  >
+                    {available.map((item) => (
+                      <option
+                        key={item.id}
+                        value={item.id}
+                      >
+                        {modeLabel[item.studyMode]}
+                        {"، "}
+                        {item.city}
+                        {item.branch
+                          ? `، ${item.branch}`
+                          : ""}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="meta">
+                  <span>
+                    <MapPin size={18} />
+
+                    {offering.studyMode === "online"
+                      ? `الفرع الإداري: ${offering.branch ||
+                      offering.city
+                      }`
+                      : `${offering.city}، ${offering.branch}`}
+                  </span>
+
+                  <span>
+                    <Users size={18} />
+                    {genderLabel[
+                      offering.gender || "both"
+                    ]}
+                  </span>
+                </div>
+
+                <div className="price-box">
+                  <small>
+                    إجمالي الرسوم
+                  </small>
+
+                  <strong>
+                    {offering.price === undefined
+                      ? "قيد التأكيد"
+                      : formatCurrency(
+                        offering.price
+                      )}
+                  </strong>
+                </div>
+
+                {offering.price === undefined && (
+                  <p className="notice">
+                    لم يُعتمد السعر في المصدر الحالي.
+                    تواصل مع المعهد للتأكد.
+                  </p>
+                )}
+
+                <Link
+                  href="/programs"
+                  className="primary-btn"
+                  style={{ width: "100%" }}
+                >
+                  العودة إلى البرامج
+                </Link>
+              </div>
+
+              {program.category === "diploma" &&
+                offering.price !== undefined &&
+                offering.minDownPayment !== undefined && (
+                  <InstallmentCalculator
+                    price={offering.price}
+                    min={offering.minDownPayment}
+                    installments={
+                      offering.installments
+                    }
+                  />
+                )}
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <div className="sticky-mobile">
+        <Link
+          href="/programs"
+          className="primary-btn"
+        >
+          استكشف برنامجًا آخر
+        </Link>
+      </div>
+    </>
+  );
+}

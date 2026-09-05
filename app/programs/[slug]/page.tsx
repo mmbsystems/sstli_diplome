@@ -1,4 +1,16 @@
-import type {Metadata} from "next";import {notFound} from "next/navigation";import {programs,getProgramBySlug} from "@/data/programs";import {offerings} from "@/data/offerings";import ProgramDetails from "@/components/program-details/ProgramDetails";
+import {Suspense} from 'react';
+import type {Metadata} from 'next';
+import {notFound} from 'next/navigation';
+import {programs,getProgramBySlug} from '@/data/programs';
+import {offerings} from '@/data/offerings';
+import ProgramDetails from '@/components/program-details/ProgramDetails';
+export const dynamicParams = false;
 export function generateStaticParams(){return programs.map(p=>({slug:p.slug}))}
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const p=getProgramBySlug(slug);return p?{title:p.name,description:p.description.slice(0,155)}:{title:"البرنامج غير موجود"}}
-export default async function DetailPage({params,searchParams}:{params:Promise<{slug:string}>;searchParams:Promise<{mode?:string;city?:string}>}){const [{slug},query]=await Promise.all([params,searchParams]);const program=getProgramBySlug(slug);if(!program)notFound();const available=offerings.filter(o=>o.programId===program.id&&o.active);return <ProgramDetails program={program} available={available} initialMode={query.mode} initialCity={query.city}/>}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const p=getProgramBySlug(slug);return p?{title:p.name,description:p.description.slice(0,155)}:{title:'البرنامج غير موجود'}}
+export default async function DetailPage({params}:{params:Promise<{slug:string}>}) {
+ const {slug}=await params;
+ const program=getProgramBySlug(slug);
+ if(!program)notFound();
+ const available=offerings.filter(o=>o.programId===program.id&&o.active);
+ return <Suspense fallback={<div className="container section" role="status">جارٍ تجهيز البرنامج...</div>}><ProgramDetails program={program} available={available}/></Suspense>;
+}
