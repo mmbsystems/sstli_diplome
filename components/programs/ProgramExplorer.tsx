@@ -1,4 +1,53 @@
-"use client";import {useEffect,useMemo,useState} from "react";import {BookOpen,Building2,GraduationCap,Laptop,MapPin,Settings2,Sparkles,X} from "lucide-react";import {useSearchParams} from "next/navigation";import {programs} from "@/data/programs";import {offerings} from "@/data/offerings";import {filterPrograms,getAvailableCities} from "@/lib/filters";import type {ProgramCategory,StudyMode} from "@/types/program";import ProgramCard from "./ProgramCard";
-const categories:{id:ProgramCategory;label:string;Icon:typeof GraduationCap}[]=[{id:"diploma",label:"الدبلومات",Icon:GraduationCap},{id:"qualifying-course",label:"الدورات التأهيلية",Icon:BookOpen},{id:"development-course",label:"الدورات التطويرية",Icon:Sparkles}];
-export default function ProgramExplorer(){const params=useSearchParams();const initial=(params.get("category") as ProgramCategory)||"diploma";const [category,setCategory]=useState<ProgramCategory>(categories.some(x=>x.id===initial)?initial:"diploma");const [mode,setMode]=useState<StudyMode|undefined>();const [city,setCity]=useState<string>();const [drawer,setDrawer]=useState(false);useEffect(()=>setCity(undefined),[category,mode]);const cities=useMemo(()=>mode?getAvailableCities(offerings,category,mode,programs):[],[category,mode]);const results=useMemo(()=>mode&&(mode==="online"||city)?filterPrograms(programs,offerings,{category,studyMode:mode,city}):[],[category,mode,city]);const regions=<div className="chips" aria-label="اختيار المنطقة">{cities.map(c=><button key={c} className={`chip ${city===c?"active":""}`} onClick={()=>setCity(c)} aria-pressed={city===c}>{c}</button>)}</div>;
-return <><section className="hero"><div className="container"><span className="eyebrow"><GraduationCap size={18}/> مستقبلك يبدأ باختيار واضح</span><h1>استكشف برامجنا التدريبية</h1><p>أجب عن خطوات قصيرة لنظهر لك البرامج المتاحة فعليًا حسب طريقة الدراسة وموقعك.</p></div></section><section className="section"><div className="container"><div className="progress"><b className="done">النوع</b> ← <b className={mode?"done":""}>طريقة الدراسة</b> {mode==="onsite"&&<>← <b className={city?"done":""}>المنطقة</b></>} ← البرامج</div><div className="panel" style={{marginTop:18}}><div className="section-head"><div><h2>1. اختر نوع البرنامج</h2><p>يمكنك تغيير اختيارك في أي وقت.</p></div></div><div className="chips">{categories.map(({id,label,Icon})=><button key={id} className={`chip ${category===id?"active":""}`} onClick={()=>setCategory(id)} aria-pressed={category===id}><Icon size={17}/> {label}</button>)}</div><div className="section-head" style={{marginTop:30}}><div><h2>2. كيف ترغب في الدراسة؟</h2></div></div><div className="mode-grid"><button className={`choice mode-card ${mode==="onsite"?"selected":""}`} onClick={()=>setMode("onsite")} aria-pressed={mode==="onsite"}><span className="icon-box"><Building2/></span><h3>حضوري</h3><p>تعلم داخل أحد فروع المعهد.</p></button><button className={`choice mode-card ${mode==="online"?"selected":""}`} onClick={()=>setMode("online")} aria-pressed={mode==="online"}><span className="icon-box"><Laptop/></span><h3>عن بُعد</h3><p>ادرس بمرونة من أي مكان.</p></button></div>{mode==="onsite"&&<div style={{marginTop:30}}><div className="section-head"><div><h2>3. اختر المنطقة</h2><p>نعرض المناطق التي تحتوي على برامج متاحة فقط.</p></div><button className="secondary-btn mobile-filter" onClick={()=>setDrawer(true)}><Settings2 size={18}/> المناطق</button></div><div className="desktop-regions">{regions}</div></div>}</div>{mode&&(mode==="online"||city)&&<><div className="results-bar"><div><h2 style={{margin:0}}>البرامج المتاحة</h2><span style={{color:"var(--secondary)"}}>{results.length} برنامج حسب اختياراتك</span></div>{mode==="onsite"&&<span className="badge"><MapPin size={14}/> {city}</span>}</div><div className="grid">{results.length?results.map(x=><ProgramCard key={x.program.id} program={x.program} available={x.offerings}/>):<div className="empty"><strong>{mode==="online"?"لا توجد برامج عن بُعد حاليًا":"لا توجد برامج متاحة في هذه المنطقة"}</strong>جرّب تغيير نوع البرنامج أو طريقة الدراسة.</div>}</div></>}{!mode&&<div className="empty" style={{marginTop:24}}><strong>اختر طريقة الدراسة للمتابعة</strong>سنظهر لك الخطوة التالية والبرامج المناسبة مباشرة.</div>}</div></section>{drawer&&<div className="drawer-backdrop" onClick={()=>setDrawer(false)}><div className="drawer" role="dialog" aria-modal="true" aria-label="اختيار المنطقة" onClick={e=>e.stopPropagation()}><div className="section-head"><h2>اختر المنطقة</h2><button className="close" onClick={()=>setDrawer(false)} aria-label="إغلاق"><X/></button></div>{regions}</div></div>}</>}
+"use client";
+import {useMemo} from 'react';
+import {GraduationCap,X} from 'lucide-react';
+import {useSearchParams} from 'next/navigation';
+import {programs} from '@/data/programs';
+import {offerings} from '@/data/offerings';
+import {filterPrograms,getAvailableCities} from '@/lib/filters';
+import type {FilterOptions,ProgramCategory} from '@/types/program';
+import ProgramCard from './ProgramCard';
+import ProgramSearch from './ProgramSearch';
+import ProgramFilterChips,{categoryNames} from './ProgramFilterChips';
+import AdvancedFilters from './AdvancedFilters';
+
+const categories=Array.from(new Set(programs.map(p=>p.category)));
+const sorts:Record<NonNullable<FilterOptions['sort']>,string>={'price-asc':'الأقل سعرًا أولًا','price-desc':'الأعلى سعرًا أولًا','duration-asc':'الأقصر أولًا','duration-desc':'الأطول أولًا'};
+export default function ProgramExplorer() {
+ const params=useSearchParams();
+ const filters=useMemo<FilterOptions>(()=>{
+  const type=params.get('type')??params.get('category');
+  const mode=params.get('mode');
+  const sort=params.get('sort');
+  return {search:params.get('search')??'',category:categories.includes(type as ProgramCategory)?type as ProgramCategory:undefined,studyMode:mode==='onsite'||mode==='online'?mode:undefined,city:params.get('city')||undefined,sort:sort&&Object.hasOwn(sorts,sort)?sort as FilterOptions['sort']:undefined};
+ },[params]);
+ const update=(patch:Partial<FilterOptions>,clear=false)=>{
+  const next=clear?{}:{...filters,...patch};
+  const query=new URLSearchParams(params.toString());
+  ['search','category','type','mode','city','sort'].forEach(key=>query.delete(key));
+  Object.entries({search:next.search,type:next.category,mode:next.studyMode,city:next.city,sort:next.sort}).forEach(([key,value])=>{if(value)query.set(key,value)});
+  const suffix=query.toString();
+  window.history.replaceState(null,'',`${window.location.pathname}${suffix?'?'+suffix:''}${window.location.hash}`);
+ };
+ const clear=()=>update({},true);
+ const results=useMemo(()=>filterPrograms(programs,offerings,filters),[filters]);
+ const cities=useMemo(()=>getAvailableCities(offerings,filters.category,filters.studyMode,programs),[filters.category,filters.studyMode]);
+ const suggestions=useMemo(()=>results.slice(0,5).map(x=>x.program),[results]);
+ const active=Boolean(filters.search||filters.category||filters.studyMode||filters.city||filters.sort);
+ return <><section className="hero"><div className="container"><span className="eyebrow"><GraduationCap size={18}/> مستقبلك يبدأ باختيار واضح</span><h1>استكشف برامجنا التدريبية</h1><p>ابحث عن تخصصك، وحدّد طريقة الدراسة ومدينتك لاستكشاف البرامج المتاحة لك.</p></div></section>
+ <section className="section"><div className="container">
+  <div className="panel explorer-controls"><ProgramSearch value={filters.search??''} onChange={search=>update({search})} suggestions={suggestions}/>
+   <div className="search-filter-row"><ProgramFilterChips categories={categories} value={filters.category} onChange={category=>update({category})}/><AdvancedFilters filters={filters} onChange={update} categories={categories} cities={cities} count={results.length} onClear={clear}/></div>
+   {active&&<div className="active-filters" aria-label="الفلاتر النشطة">
+    {filters.search&&<button className="chip" onClick={()=>update({search:undefined})}>البحث: {filters.search}<X size={14}/></button>}
+    {filters.category&&<button className="chip" onClick={()=>update({category:undefined})}>{categoryNames[filters.category]}<X size={14}/></button>}
+    {filters.studyMode&&<button className="chip" onClick={()=>update({studyMode:undefined})}>{filters.studyMode==='online'?'أونلاين':'حضوري'}<X size={14}/></button>}
+    {filters.city&&<button className="chip" onClick={()=>update({city:undefined})}>{filters.city}<X size={14}/></button>}
+    {filters.sort&&<button className="chip" onClick={()=>update({sort:undefined})}>{sorts[filters.sort]}<X size={14}/></button>}
+    <button className="clear-all" onClick={clear}>مسح جميع الفلاتر</button>
+   </div>}
+  </div>
+  <div className="results-bar"><h2>البرامج المتاحة</h2><span role="status" aria-live="polite" aria-atomic="true">تم العثور على {results.length} برنامج</span></div>
+  <div className="grid">{results.length?results.map(x=><ProgramCard key={x.program.id} program={x.program} available={x.offerings}/>):<div className="empty"><strong>لا توجد برامج مطابقة لبحثك</strong><p>جرّب البحث بكلمة أخرى أو قم بتعديل الفلاتر.</p><button className="secondary-btn" onClick={clear}>مسح الفلاتر</button></div>}</div>
+ </div></section></>;
+}
