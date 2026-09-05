@@ -1,0 +1,17 @@
+[
+  {
+    "username": "bahaa",
+    "name": "بهاء محمود",
+    "passwordHash": "$2b$12$/9AsE3Uk5.bnjHYh67FPCOVo8Z4XuJK7gnzSs9jWLZWnaHUeoFHjW"
+  },
+  {
+    "username": "ahmed",
+    "name": "احمد القاسمي",
+    "passwordHash": "$2b$12$nDwrT3VqpYEeXJIHzBYa8eVIkdna.u8Ub4geTtgYM44fqv3FA2sGO"
+  },
+  {
+    "username": "mohamed",
+    "name": "محمد شعبان",
+    "passwordHash": "$2b$12$q1ntCUUK796l55ZW7xf/sOkQl2XYsQnR6vzh76eNFr1SRTJhJq.ge"
+  }
+]
