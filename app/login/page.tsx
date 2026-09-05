@@ -2,7 +2,8 @@ import Image from 'next/image';
 import {redirect} from 'next/navigation';
 import {currentUser} from '@/lib/auth';
 import LoginForm from './LoginForm';
-export const metadata = {title: 'تسجيل الدخول', robots: {index: false, follow: false}};
+// Inherit every root robots directive, including Googlebot and nocache.
+export const metadata = {title: 'تسجيل الدخول'};
 export default async function LoginPage() {
   if (await currentUser()) redirect('/programs?category=diploma');
   return <section className="login-shell"><div className="panel login-panel">

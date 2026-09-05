@@ -13,5 +13,95 @@
     "username": "mohamed",
     "name": "محمد شعبان",
     "passwordHash": "$2b$12$q1ntCUUK796l55ZW7xf/sOkQl2XYsQnR6vzh76eNFr1SRTJhJq.ge"
+  },
+  {
+    "username": "riyadh_hamra",
+    "name": "فرع الرياض — حي الحمراء",
+    "passwordHash": "$2b$12$N58eR5CPtDm312mUxC.Azu9DBmrsMMVzG3.cFOCkNKYP3fy/BfY/.",
+    "branch": "الرياض — حي الحمراء"
+  },
+  {
+    "username": "riyadh_laban",
+    "name": "فرع الرياض — حي ظهرة لبن",
+    "passwordHash": "$2b$12$W2KBmhGxlhSCdZ0EFIUqg.NELvdvl5Fjtv3I31ssFsoYQf64EPGfa",
+    "branch": "الرياض — حي ظهرة لبن"
+  },
+  {
+    "username": "riyadh_andalus",
+    "name": "فرع الرياض — حي الأندلس",
+    "passwordHash": "$2b$12$TjcZM6ZDL6yhpwdkyCLKqOcqgkLxja2duH6gsHodnzTquOR7seum.",
+    "branch": "الرياض — حي الأندلس"
+  },
+  {
+    "username": "dammam_zuhour1",
+    "name": "فرع الدمام — حي الزهور 1",
+    "passwordHash": "$2b$12$X.yvK4dk9lpzRfHIFWXp3.Dh3SbqYENEcK1W5jatLV/FzP2mlGdo.",
+    "branch": "الدمام — حي الزهور 1"
+  },
+  {
+    "username": "dammam_zuhour2",
+    "name": "فرع الدمام — حي الزهور 2",
+    "passwordHash": "$2b$12$iR/CsbgunGRacDXFkfurk.NM4hooTRH.6ekpnUCdIKj8AdJ0H353C",
+    "branch": "الدمام — حي الزهور 2"
+  },
+  {
+    "username": "dammam_shati_west",
+    "name": "فرع الدمام — حي الشاطئ الغربي",
+    "passwordHash": "$2b$12$af7zjCwsf549lrEVOzVsteQVrKyzMCPdGwzhiJ44nZzmk2rBrowl2",
+    "branch": "الدمام — حي الشاطئ الغربي"
+  },
+  {
+    "username": "dammam",
+    "name": "فرع الدمام",
+    "passwordHash": "$2b$12$F5tq6CjHJjODKn4NV38yxeM99YMB913c.1dN1ev9j2FoeAbVEoXpO",
+    "branch": "الدمام — فرع الدمام"
+  },
+  {
+    "username": "hafr_waha",
+    "name": "فرع حفر الباطن — حي الواحة",
+    "passwordHash": "$2b$12$BWYbFqFyRDlL0fzTf8UUneq18QWOfzWiJg4vqKBT3kHCHCSHzeC5y",
+    "branch": "حفر الباطن — حي الواحة"
+  },
+  {
+    "username": "hafr_masif",
+    "name": "فرع حفر الباطن — حي المصيف",
+    "passwordHash": "$2b$12$Bg9h66qkeuPD/yYJmmtBVeEXXvOPxi7fFsFRc/EmH.00V3bCg40Ee",
+    "branch": "حفر الباطن — حي المصيف"
+  },
+  {
+    "username": "khamis_dharfa",
+    "name": "فرع خميس مشيط — حي الظرفة",
+    "passwordHash": "$2b$12$A7gWyN3qlhSRCBCOirk5ke6zjB6FwwiMy4Vpcb2/9281M3xzhNRQ6",
+    "branch": "خميس مشيط — حي الظرفة"
+  },
+  {
+    "username": "khamis_square",
+    "name": "فرع خميس مشيط — سكوير",
+    "passwordHash": "$2b$12$2JYtlEdYNjB1FkrrQ.gUN.ra2ho58wxF.C6fqw3/Y2UvjYPuOFNhm",
+    "branch": "خميس مشيط — سكوير"
+  },
+  {
+    "username": "madinah",
+    "name": "فرع المدينة المنورة",
+    "passwordHash": "$2b$12$LPLPeUaaADmR0Bss12VpBOKBj8MEir86QFag4Z2oPgSvkZEHB/eNG",
+    "branch": "المدينة المنورة — فرع المدينة المنورة"
+  },
+  {
+    "username": "sakaka",
+    "name": "فرع سكاكا",
+    "passwordHash": "$2b$12$zfX/OFfd/Otqhq/zVu2ZbuiTH0cku9bjafZR3fUV2UrC8sZLMhHTu",
+    "branch": "سكاكا / الجوف — فرع سكاكا"
+  },
+  {
+    "username": "dammam_shati",
+    "name": "فرع الدمام — حي الشاطئ",
+    "passwordHash": "$2b$12$VNtQxfriDfK25rp4b2DAy.At25kCxnA1TfnOdGB9wfPy1QmmBPFla",
+    "branch": "الدمام — حي الشاطئ"
+  },
+  {
+    "username": "dammam_zuhour",
+    "name": "فرع الدمام — حي الزهور",
+    "passwordHash": "$2b$12$35kWueuqfX64ExVH2sJTw.y27LsLG5e2mLW3RRRFHtJxPGkJc0cd2",
+    "branch": "الدمام — حي الزهور"
   }
 ]

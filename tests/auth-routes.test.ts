@@ -58,3 +58,28 @@ it('rejects cross-origin authentication requests', async () => {
     expect((await handler(req)).status).toBe(403);
   }
 });
+it('reports a missing signing secret as a server problem without setting a cookie', async () => {
+  const original = process.env.AUTH_SECRET;
+  const log = vi.spyOn(console, 'error').mockImplementation(() => {});
+  delete process.env.AUTH_SECRET;
+  try {
+    const response = await login(request('/api/auth/login', {username:'test-staff',password}));
+    expect(response.status).toBe(500);
+    expect(await response.json()).toEqual({error:'تعذر تسجيل الدخول حاليًا. يرجى المحاولة لاحقًا'});
+    expect(response.cookies.get(COOKIE_NAME)).toBeUndefined();
+  } finally { process.env.AUTH_SECRET = original; log.mockRestore(); }
+});
+it('accepts same-origin loopback requests without trusting forwarded hosts', async () => {
+  const url = 'http://127.0.0.1:3000/api/auth/login';
+  const response = await login(new NextRequest(url, {method:'POST', headers:{origin:'http://127.0.0.1:3000',host:'127.0.0.1:3000','content-type':'application/json'},body:JSON.stringify({username:'test-staff',password})}));
+  expect(response.status).toBe(200);
+  const forged = await login(new NextRequest(url, {method:'POST',headers:{origin:'https://attacker.invalid',host:'sstli.example','x-forwarded-host':'attacker.invalid'}}));
+  expect(forged.status).toBe(403);
+});
+it('rejects malformed and oversized JSON before credential verification', async () => {
+  for (const body of ['{', JSON.stringify({username:'test-staff',password:'x'.repeat(5000)})]) {
+    const response = await login(new NextRequest(origin+'/api/auth/login',{method:'POST',headers:{origin,'content-type':'application/json'},body}));
+    expect(response.status).toBe(400);
+    expect(response.cookies.get(COOKIE_NAME)).toBeUndefined();
+  }
+});
