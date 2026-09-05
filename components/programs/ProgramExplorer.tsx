@@ -2,25 +2,23 @@
 import {useMemo} from 'react';
 import {GraduationCap,X} from 'lucide-react';
 import {useSearchParams} from 'next/navigation';
-import {programs} from '@/data/programs';
-import {offerings} from '@/data/offerings';
 import {filterPrograms,getAvailableCities} from '@/lib/filters';
-import type {FilterOptions,ProgramCategory} from '@/types/program';
+import type {FilterOptions,ProgramCategory,Program,Offering} from '@/types/program';
 import ProgramCard from './ProgramCard';
 import ProgramSearch from './ProgramSearch';
 import ProgramFilterChips,{categoryNames} from './ProgramFilterChips';
 import AdvancedFilters from './AdvancedFilters';
 
-const categories=Array.from(new Set(programs.map(p=>p.category)));
 const sorts:Record<NonNullable<FilterOptions['sort']>,string>={'price-asc':'الأقل سعرًا أولًا','price-desc':'الأعلى سعرًا أولًا','duration-asc':'الأقصر أولًا','duration-desc':'الأطول أولًا'};
-export default function ProgramExplorer() {
+export default function ProgramExplorer({programs,offerings}:{programs:Program[];offerings:Offering[]}) {
+ const categories=useMemo(()=>Array.from(new Set(programs.map(p=>p.category))),[programs]);
  const params=useSearchParams();
  const filters=useMemo<FilterOptions>(()=>{
   const type=params.get('type')??params.get('category');
   const mode=params.get('mode');
   const sort=params.get('sort');
   return {search:params.get('search')??'',category:categories.includes(type as ProgramCategory)?type as ProgramCategory:undefined,studyMode:mode==='onsite'||mode==='online'?mode:undefined,city:params.get('city')||undefined,sort:sort&&Object.hasOwn(sorts,sort)?sort as FilterOptions['sort']:undefined};
- },[params]);
+ },[params,categories]);
  const update=(patch:Partial<FilterOptions>,clear=false)=>{
   const next=clear?{}:{...filters,...patch};
   const query=new URLSearchParams(params.toString());
@@ -30,8 +28,8 @@ export default function ProgramExplorer() {
   window.history.replaceState(null,'',`${window.location.pathname}${suffix?'?'+suffix:''}${window.location.hash}`);
  };
  const clear=()=>update({},true);
- const results=useMemo(()=>filterPrograms(programs,offerings,filters),[filters]);
- const cities=useMemo(()=>getAvailableCities(offerings,filters.category,filters.studyMode,programs),[filters.category,filters.studyMode]);
+ const results=useMemo(()=>filterPrograms(programs,offerings,filters),[filters,programs,offerings]);
+ const cities=useMemo(()=>getAvailableCities(offerings,filters.category,filters.studyMode,programs),[filters.category,filters.studyMode,programs,offerings]);
  const suggestions=useMemo(()=>results.slice(0,5).map(x=>x.program),[results]);
  const active=Boolean(filters.search||filters.category||filters.studyMode||filters.city||filters.sort);
  return <><section className="hero"><div className="container"><span className="eyebrow"><GraduationCap size={18}/> مستقبلك يبدأ باختيار واضح</span><h1>استكشف برامجنا التدريبية</h1><p>ابحث عن تخصصك، وحدّد طريقة الدراسة ومدينتك لاستكشاف البرامج المتاحة لك.</p></div></section>

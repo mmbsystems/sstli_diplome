@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import {useSearchParams} from 'next/navigation';
 import {
   BadgeCheck,
   BookOpen,
@@ -28,8 +29,9 @@ export default function ProgramDetails({
   program: Program;
   available: Offering[];
 }) {
+  const params = useSearchParams();
   const [offeringId, setOfferingId] = useState(
-    available[0]?.id ?? ""
+    () => available.find(item => (!params.get('mode') || item.studyMode === params.get('mode')) && (!params.get('city') || item.city === params.get('city')))?.id ?? available[0]?.id ?? ""
   );
 
   const offering = useMemo(() => {
