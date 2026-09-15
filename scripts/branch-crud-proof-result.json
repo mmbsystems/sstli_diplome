@@ -1,0 +1,367 @@
+{
+  "startedAt": "2026-09-13T11:44:37.256Z",
+  "base": "http://127.0.0.1:3214",
+  "verificationName": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+  "verificationCity": "مدينة اختبار غير تجارية cf1ede3a-8dee-4443-988d-a385392070f6",
+  "branchId": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+  "steps": [
+    {
+      "step": "anonymous denied",
+      "status": 401,
+      "ms": 102
+    },
+    {
+      "step": "staff denied",
+      "status": 403,
+      "ms": 10
+    },
+    {
+      "step": "staff actor and role spoof denied",
+      "status": 403,
+      "ms": 6
+    },
+    {
+      "step": "real admin login",
+      "status": 200
+    },
+    {
+      "step": "create",
+      "status": 200,
+      "version": 1,
+      "ms": 518
+    },
+    {
+      "step": "update metadata",
+      "status": 200,
+      "version": 2,
+      "ms": 474
+    },
+    {
+      "step": "stale version",
+      "status": 409,
+      "ms": 471
+    },
+    {
+      "step": "missing version",
+      "status": 422,
+      "ms": 9
+    },
+    {
+      "step": "actor spoof rejected",
+      "status": 422,
+      "ms": 8
+    },
+    {
+      "step": "role spoof rejected",
+      "status": 422,
+      "ms": 7
+    },
+    {
+      "step": "legacy identity injection",
+      "status": 422,
+      "ms": 7
+    },
+    {
+      "step": "invalid input",
+      "status": 422,
+      "ms": 8
+    },
+    {
+      "step": "duplicate exact create",
+      "status": 409,
+      "ms": 636
+    },
+    {
+      "step": "duplicate exact update",
+      "status": 409,
+      "ms": 528
+    },
+    {
+      "step": "archive",
+      "status": 200,
+      "version": 3,
+      "ms": 453
+    },
+    {
+      "step": "restore",
+      "status": 200,
+      "version": 4,
+      "ms": 475
+    },
+    {
+      "step": "final retained archive",
+      "status": 200,
+      "version": 5,
+      "ms": 507
+    }
+  ],
+  "baselineSHA256": {
+    "programs": "1fcfac60fac40b7c02101cc93f116de924e6a875b0664cc0947d33879ab55ea8",
+    "branches": "57fde515dd659bffe645e60efd71896db6f401db9a9d8486f557e214781836ef",
+    "program_offerings": "551c36bae65d168b32635feb222c5b7f3c1a9bf016d18c285eb4f8d9ad3a9303",
+    "curriculum_items": "efb20d0e538df2295c7a62cbbf3f2007764d57ba14baf0a0bfb0820c0d7fc1b7",
+    "career_paths": "ef1cf76316c255e2ee679142b1a820e0e0855d1c4e94efb39620a0e0f33ff2a4"
+  },
+  "manifestSHA256": "f65d96c408be1cf46996c29312b8a251ea37d7d06c8c7949f2f4b4fb20a095a1",
+  "audit": [
+    {
+      "id": "348e93e8-c738-40ab-8326-82ce073dc1b9",
+      "actor_user_id": null,
+      "actor_label": "مدير النظام",
+      "action": "restore",
+      "entity_type": "branches",
+      "entity_id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+      "entity_label": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+      "branch_id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+      "before_data": {
+        "id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+        "city": "مدينة اختبار غير تجارية cf1ede3a-8dee-4443-988d-a385392070f6",
+        "name": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+        "address": "بيانات تحقق محدثة؛ لا يستخدم للعمل",
+        "version": 3,
+        "is_active": false,
+        "created_at": "2026-09-13T11:44:46.379252+00:00",
+        "legacy_key": null,
+        "updated_at": "2026-09-13T11:45:11.017783+00:00",
+        "archived_at": "2026-09-13T11:45:11.01732+00:00",
+        "directory_listed": false,
+        "source_region_label": "منطقة اختبار غير تجارية"
+      },
+      "after_data": {
+        "id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+        "city": "مدينة اختبار غير تجارية cf1ede3a-8dee-4443-988d-a385392070f6",
+        "name": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+        "address": "بيانات تحقق محدثة؛ لا يستخدم للعمل",
+        "version": 4,
+        "is_active": false,
+        "created_at": "2026-09-13T11:44:46.379252+00:00",
+        "legacy_key": null,
+        "updated_at": "2026-09-13T11:45:12.04079+00:00",
+        "archived_at": null,
+        "directory_listed": false,
+        "source_region_label": "منطقة اختبار غير تجارية"
+      },
+      "metadata": {
+        "system": false,
+        "legacy_actor": {
+          "name": "مدير النظام",
+          "role": "super_admin",
+          "username": "admin",
+          "request_id": "6714f84f-cc13-4a27-be1a-0e026df95692"
+        },
+        "transaction_id": "118708"
+      },
+      "created_at": "2026-09-13T11:45:12.036183+00:00"
+    },
+    {
+      "id": "379a7bf3-0b27-48cf-9764-b5871687fcde",
+      "actor_user_id": null,
+      "actor_label": "مدير النظام",
+      "action": "create",
+      "entity_type": "branches",
+      "entity_id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+      "entity_label": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+      "branch_id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+      "before_data": null,
+      "after_data": {
+        "id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+        "city": "مدينة اختبار غير تجارية cf1ede3a-8dee-4443-988d-a385392070f6",
+        "name": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+        "address": null,
+        "version": 1,
+        "is_active": false,
+        "created_at": "2026-09-13T11:44:46.379252+00:00",
+        "legacy_key": null,
+        "updated_at": "2026-09-13T11:44:46.379252+00:00",
+        "archived_at": null,
+        "directory_listed": false,
+        "source_region_label": "منطقة اختبار غير تجارية"
+      },
+      "metadata": {
+        "system": false,
+        "legacy_actor": {
+          "name": "مدير النظام",
+          "role": "super_admin",
+          "username": "admin",
+          "request_id": "a5d3c092-f9e8-4b85-9328-07d83292389e"
+        },
+        "transaction_id": "118694"
+      },
+      "created_at": "2026-09-13T11:44:46.379252+00:00"
+    },
+    {
+      "id": "97d5a100-f521-4956-8a3d-66b0b634e76f",
+      "actor_user_id": null,
+      "actor_label": "مدير النظام",
+      "action": "archive",
+      "entity_type": "branches",
+      "entity_id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+      "entity_label": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+      "branch_id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+      "before_data": {
+        "id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+        "city": "مدينة اختبار غير تجارية cf1ede3a-8dee-4443-988d-a385392070f6",
+        "name": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+        "address": "بيانات تحقق محدثة؛ لا يستخدم للعمل",
+        "version": 4,
+        "is_active": false,
+        "created_at": "2026-09-13T11:44:46.379252+00:00",
+        "legacy_key": null,
+        "updated_at": "2026-09-13T11:45:12.04079+00:00",
+        "archived_at": null,
+        "directory_listed": false,
+        "source_region_label": "منطقة اختبار غير تجارية"
+      },
+      "after_data": {
+        "id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+        "city": "مدينة اختبار غير تجارية cf1ede3a-8dee-4443-988d-a385392070f6",
+        "name": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+        "address": "بيانات تحقق محدثة؛ لا يستخدم للعمل",
+        "version": 5,
+        "is_active": false,
+        "created_at": "2026-09-13T11:44:46.379252+00:00",
+        "legacy_key": null,
+        "updated_at": "2026-09-13T11:45:13.302161+00:00",
+        "archived_at": "2026-09-13T11:45:13.301216+00:00",
+        "directory_listed": false,
+        "source_region_label": "منطقة اختبار غير تجارية"
+      },
+      "metadata": {
+        "system": false,
+        "legacy_actor": {
+          "name": "مدير النظام",
+          "role": "super_admin",
+          "username": "admin",
+          "request_id": "1a1cd820-eb00-4339-b2d8-0bdd16817b8d"
+        },
+        "transaction_id": "118711"
+      },
+      "created_at": "2026-09-13T11:45:13.299678+00:00"
+    },
+    {
+      "id": "a78692a6-d77a-44c3-b719-1e6588fd72e2",
+      "actor_user_id": null,
+      "actor_label": "مدير النظام",
+      "action": "archive",
+      "entity_type": "branches",
+      "entity_id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+      "entity_label": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+      "branch_id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+      "before_data": {
+        "id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+        "city": "مدينة اختبار غير تجارية cf1ede3a-8dee-4443-988d-a385392070f6",
+        "name": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+        "address": "بيانات تحقق محدثة؛ لا يستخدم للعمل",
+        "version": 2,
+        "is_active": false,
+        "created_at": "2026-09-13T11:44:46.379252+00:00",
+        "legacy_key": null,
+        "updated_at": "2026-09-13T11:44:48.690883+00:00",
+        "archived_at": null,
+        "directory_listed": false,
+        "source_region_label": "منطقة اختبار غير تجارية"
+      },
+      "after_data": {
+        "id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+        "city": "مدينة اختبار غير تجارية cf1ede3a-8dee-4443-988d-a385392070f6",
+        "name": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+        "address": "بيانات تحقق محدثة؛ لا يستخدم للعمل",
+        "version": 3,
+        "is_active": false,
+        "created_at": "2026-09-13T11:44:46.379252+00:00",
+        "legacy_key": null,
+        "updated_at": "2026-09-13T11:45:11.017783+00:00",
+        "archived_at": "2026-09-13T11:45:11.01732+00:00",
+        "directory_listed": false,
+        "source_region_label": "منطقة اختبار غير تجارية"
+      },
+      "metadata": {
+        "system": false,
+        "legacy_actor": {
+          "name": "مدير النظام",
+          "role": "super_admin",
+          "username": "admin",
+          "request_id": "4663e8fb-b909-45c0-8bc0-77497b9f3fad"
+        },
+        "transaction_id": "118705"
+      },
+      "created_at": "2026-09-13T11:45:11.014418+00:00"
+    },
+    {
+      "id": "f2e3705e-16a0-42a3-86ed-105e5b8dd0a2",
+      "actor_user_id": null,
+      "actor_label": "مدير النظام",
+      "action": "update",
+      "entity_type": "branches",
+      "entity_id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+      "entity_label": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+      "branch_id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+      "before_data": {
+        "id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+        "city": "مدينة اختبار غير تجارية cf1ede3a-8dee-4443-988d-a385392070f6",
+        "name": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+        "address": null,
+        "version": 1,
+        "is_active": false,
+        "created_at": "2026-09-13T11:44:46.379252+00:00",
+        "legacy_key": null,
+        "updated_at": "2026-09-13T11:44:46.379252+00:00",
+        "archived_at": null,
+        "directory_listed": false,
+        "source_region_label": "منطقة اختبار غير تجارية"
+      },
+      "after_data": {
+        "id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+        "city": "مدينة اختبار غير تجارية cf1ede3a-8dee-4443-988d-a385392070f6",
+        "name": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+        "address": "بيانات تحقق محدثة؛ لا يستخدم للعمل",
+        "version": 2,
+        "is_active": false,
+        "created_at": "2026-09-13T11:44:46.379252+00:00",
+        "legacy_key": null,
+        "updated_at": "2026-09-13T11:44:48.690883+00:00",
+        "archived_at": null,
+        "directory_listed": false,
+        "source_region_label": "منطقة اختبار غير تجارية"
+      },
+      "metadata": {
+        "system": false,
+        "legacy_actor": {
+          "name": "مدير النظام",
+          "role": "super_admin",
+          "username": "admin",
+          "request_id": "6d305991-b834-454b-b38e-3d3ed6767070"
+        },
+        "transaction_id": "118696"
+      },
+      "created_at": "2026-09-13T11:44:48.682843+00:00"
+    }
+  ],
+  "finalBranch": {
+    "id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+    "legacy_key": null,
+    "name": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+    "city": "مدينة اختبار غير تجارية cf1ede3a-8dee-4443-988d-a385392070f6",
+    "source_region_label": "منطقة اختبار غير تجارية",
+    "directory_listed": false,
+    "address": "بيانات تحقق محدثة؛ لا يستخدم للعمل",
+    "is_active": false,
+    "created_at": "2026-09-13T11:44:46.379252+00:00",
+    "updated_at": "2026-09-13T11:45:13.302161+00:00",
+    "version": 5,
+    "archived_at": "2026-09-13T11:45:13.301216+00:00"
+  },
+  "finalCounts": {
+    "branches": 17,
+    "originalBusinessBranches": 16,
+    "archivedVerificationBranches": 1,
+    "offerings": 83,
+    "linkedOfferings": 0
+  },
+  "finalOfferingSHA256": "551c36bae65d168b32635feb222c5b7f3c1a9bf016d18c285eb4f8d9ad3a9303",
+  "originalBranchSHA256": "57fde515dd659bffe645e60efd71896db6f401db9a9d8486f557e214781836ef",
+  "staffExcludesArtifact": true,
+  "adminCanManageArtifact": true,
+  "success": true,
+  "finishedAt": "2026-09-13T11:45:16.440Z"
+}

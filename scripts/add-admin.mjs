@@ -3,6 +3,10 @@ import {fileURLToPath} from 'node:url';
 import bcrypt from 'bcryptjs';
 
 const [username, password, name, branch, ...extra] = process.argv.slice(2);
+if (username === 'admin') {
+  console.error('Use bootstrap-super-admin.mjs with an environment-supplied password for the dedicated admin account.');
+  process.exit(1);
+}
 if (extra.length || !username || !/^[a-zA-Z0-9_.-]{1,64}$/.test(username) || !password || password.length < 12 || Buffer.byteLength(password) > 72 || !name?.trim() || name.length > 120 || (branch !== undefined && (!branch.trim() || branch.length > 160))) {
   console.error('يلزم اسم مستخدم صالح، وكلمة مرور من 12 حرفًا على الأقل و72 بايت كحد أقصى، والاسم.');
   process.exit(1);

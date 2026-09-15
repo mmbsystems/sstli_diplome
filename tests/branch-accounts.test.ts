@@ -10,7 +10,7 @@ it('keeps exactly one branch account per branch recorded in active offerings', (
   expect(new Set(accounts.map(a => a.username)).size).toBe(accounts.length);
   expect(accounts.some(a => a.username === 'bahaa')).toBe(true);
   for (const account of accounts) {
-    expect(Object.keys(account).every(key => ['username','name','passwordHash','branch'].includes(key))).toBe(true);
+    expect(Object.keys(account).every(key => ['username','name','passwordHash','branch','role'].includes(key))).toBe(true);
     expect(/^\$2[aby]\$12\$[./A-Za-z0-9]{53}$/.test(account.passwordHash)).toBe(true);
   }
 });

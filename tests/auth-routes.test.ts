@@ -34,7 +34,7 @@ it('logs in, navigates, refreshes and logs out without returning hashes', async 
   const cookie = response.cookies.get(COOKIE_NAME)!;
   expect(cookie.httpOnly).toBe(true); expect(cookie.sameSite).toBe('lax'); expect(cookie.path).toBe('/');
   fixture.jar.set(COOKIE_NAME, cookie.value);
-  expect(await currentUser()).toEqual({username:'test-staff',name:'موظف تجريبي'});
+  expect(await currentUser()).toEqual({username:'test-staff',name:'موظف تجريبي',role:'staff'});
   for (const path of ['/', '/programs', '/programs/law', '/programs?category=diploma']) {
     expect((await middleware(request(path, undefined, cookie.value))).headers.get('location')).toBeNull();
   }

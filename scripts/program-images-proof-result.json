@@ -1,0 +1,22 @@
+{
+  "slug": "image-verification-0dc9dde2-a347-46b8-906a-ca1980caaf6c",
+  "programId": "6b433ca8-4fe2-40d8-be28-734fa295b25c",
+  "success": true,
+  "steps": [
+    "upload",
+    "admin/staff read; anonymous denied",
+    "direct anonymous/private and public-URL reads denied",
+    "replace; previous object removed",
+    "remove; zero program Storage objects",
+    "program create/update/archive/restore and nested add/edit/remove/reorder"
+  ],
+  "staleMs": 490,
+  "finalVersion": 10,
+  "storageObjects": 0,
+  "originalRowsUnchanged": true,
+  "auditBefore": 34,
+  "auditAfter": 53,
+  "responsesScanned": 24,
+  "secretHits": 0,
+  "cleanupRequired": true
+}

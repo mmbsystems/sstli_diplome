@@ -1,0 +1,175 @@
+{
+  "slug": "crud-verification-5f40f080-916b-4464-aade-6190f80b4e36",
+  "steps": [
+    {
+      "step": "anonymous denied",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "anonymous denied",
+      "status": 401,
+      "ms": 78
+    },
+    {
+      "step": "staff spoof denied",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "staff spoof denied",
+      "status": 403,
+      "ms": 17
+    },
+    {
+      "step": "invalid create",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "invalid create",
+      "status": 422,
+      "ms": 12
+    },
+    {
+      "step": "create",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "update",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "stale version",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "stale version",
+      "status": 409,
+      "ms": 480
+    },
+    {
+      "step": "missing version",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "missing version",
+      "status": 422,
+      "ms": 8
+    },
+    {
+      "step": "actor injection",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "actor injection",
+      "status": 422,
+      "ms": 7
+    },
+    {
+      "step": "column injection",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "column injection",
+      "status": 422,
+      "ms": 8
+    },
+    {
+      "step": "invalid publication",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "invalid publication",
+      "status": 422,
+      "ms": 8
+    },
+    {
+      "step": "duplicate slug update",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "duplicate slug update",
+      "status": 409,
+      "ms": 787
+    },
+    {
+      "step": "duplicate slug create",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "duplicate slug create",
+      "status": 409,
+      "ms": 482
+    },
+    {
+      "step": "missing program",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "missing program",
+      "status": 404,
+      "ms": 480
+    },
+    {
+      "step": "curriculum add",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "curriculum edit reorder",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "careers add",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "careers edit reorder",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "nested rollback",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "nested rollback",
+      "status": 422,
+      "ms": 443
+    },
+    {
+      "step": "career rollback",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "career rollback",
+      "status": 422,
+      "ms": 482
+    },
+    {
+      "step": "child remove",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "archive",
+      "scopeUnchanged": true
+    },
+    {
+      "step": "restore",
+      "scopeUnchanged": true
+    }
+  ],
+  "programId": "36cbd915-7b73-448f-a6ef-30d3f25b8564",
+  "baselineHashes": {
+    "programs": "1fcfac60fac40b7c02101cc93f116de924e6a875b0664cc0947d33879ab55ea8",
+    "branches": "57fde515dd659bffe645e60efd71896db6f401db9a9d8486f557e214781836ef",
+    "program_offerings": "551c36bae65d168b32635feb222c5b7f3c1a9bf016d18c285eb4f8d9ad3a9303",
+    "curriculum_items": "efb20d0e538df2295c7a62cbbf3f2007764d57ba14baf0a0bfb0820c0d7fc1b7",
+    "career_paths": "ef1cf76316c255e2ee679142b1a820e0e0855d1c4e94efb39620a0e0f33ff2a4"
+  },
+  "auditIds": [
+    "94ed401d-4209-4aff-80be-6dd6e240bbe2",
+    "aef94822-d452-4484-a18d-16d6ad131fa8",
+    "cccd8399-bdf1-4422-a931-11f5b87af352",
+    "d108003c-3495-4de5-9cbb-a4a5ae1fbf76"
+  ],
+  "finalVersion": 9,
+  "manifestSHA256": "f65d96c408be1cf46996c29312b8a251ea37d7d06c8c7949f2f4b4fb20a095a1",
+  "success": true
+}

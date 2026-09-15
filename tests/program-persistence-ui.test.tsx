@@ -1,0 +1,57 @@
+import React from 'react';
+import {afterEach,expect,it,vi} from 'vitest';
+import {cleanup,fireEvent,render,screen,waitFor} from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import {AdminProvider} from '@/components/admin/AdminProvider';
+import ProgramEditor from '@/components/admin/ProgramEditor';
+import {createAdminSnapshot} from '@/lib/admin/adapter';
+import {programs} from '@/data/programs';import {offerings} from '@/data/offerings';import {branches} from '@/data/branches';
+const navigation=vi.hoisted(()=>({replace:vi.fn(),refresh:vi.fn()}));
+vi.mock('next/navigation',()=>({useRouter:()=>navigation,usePathname:()=>'/admin/programs/law',useSearchParams:()=>new URLSearchParams()}));
+afterEach(()=>{cleanup();vi.unstubAllGlobals();});
+it('persists program-only payload, preserves nested IDs through reorder and keeps conflict edits',async()=>{
+ const data=createAdminSnapshot(programs,offerings,branches);const p=data.programs.find(p=>p.id==='law')!;p.version=4;p.curriculum=['A','B'];p.curriculumItems=[{id:'a',title:'A'},{id:'b',title:'B'}];
+ const fetcher=vi.fn().mockResolvedValue({ok:false,status:409,json:async()=>({error:'conflict'})});vi.stubGlobal('fetch',fetcher);
+ render(<AdminProvider initial={data} userName="مدير النظام" persistentPrograms><ProgramEditor id="law"/></AdminProvider>);
+ fireEvent.click(screen.getByRole('button',{name:'المحتوى الدراسي'}));fireEvent.click(screen.getByRole('button',{name:'نقل لأعلى: مقرر 2'}));fireEvent.click(screen.getByRole('button',{name:'حفظ التغييرات'}));
+ await waitFor(()=>expect(fetcher).toHaveBeenCalled());const sent=JSON.parse(fetcher.mock.calls[0][1].body);expect(sent.expectedVersion).toBe(4);expect(sent.curriculum).toEqual([{id:'b',title:'B'},{id:'a',title:'A'}]);expect(sent.program.offerings).toBeUndefined();
+ expect(await screen.findByRole('button',{name:'إعادة تحميل النسخة الحالية'})).toBeInTheDocument();expect(screen.getByRole('textbox',{name:'مقرر 1'})).toHaveValue('B');
+});
+it('uses returned version on the next save and clears dirty state only on success',async()=>{
+ const data=createAdminSnapshot(programs,offerings,branches);const p=data.programs.find(p=>p.id==='law')!;p.version=4;
+ const saved={...p,name:'اسم محفوظ',version:5};
+ const fetcher=vi.fn().mockResolvedValue({ok:true,status:200,json:async()=>({program:saved})});vi.stubGlobal('fetch',fetcher);
+ render(<AdminProvider initial={data} userName="مدير النظام" persistentPrograms><ProgramEditor id="law"/></AdminProvider>);
+ fireEvent.change(screen.getByRole('textbox',{name:'اسم البرنامج'}),{target:{value:'اسم جديد'}});
+ fireEvent.click(screen.getByRole('button',{name:'حفظ التغييرات'}));
+ expect(await screen.findByText('تم حفظ التغييرات في قاعدة البيانات.')).toBeInTheDocument();
+ expect(screen.queryByText('لديك تغييرات غير محفوظة')).not.toBeInTheDocument();
+ expect(screen.getByRole('textbox',{name:'اسم البرنامج'})).toHaveValue('اسم محفوظ');
+ fireEvent.change(screen.getByRole('textbox',{name:'اسم البرنامج'}),{target:{value:'تعديل آخر'}});
+ fireEvent.click(screen.getByRole('button',{name:'حفظ التغييرات'}));
+ await waitFor(()=>expect(fetcher).toHaveBeenCalledTimes(2));
+ expect(JSON.parse(fetcher.mock.calls[1][1].body).expectedVersion).toBe(5);
+});
+it.each([422,500])('preserves unsaved form on HTTP %i',async status=>{
+ const data=createAdminSnapshot(programs,offerings,branches);data.programs.find(p=>p.id==='law')!.version=1;
+ vi.stubGlobal('fetch',vi.fn().mockResolvedValue({ok:false,status,json:async()=>({error:'database'})}));
+ render(<AdminProvider initial={data} userName="مدير النظام" persistentPrograms><ProgramEditor id="law"/></AdminProvider>);
+ fireEvent.change(screen.getByRole('textbox',{name:'اسم البرنامج'}),{target:{value:'تعديل غير محفوظ'}});
+ fireEvent.click(screen.getByRole('button',{name:'حفظ التغييرات'}));
+ await screen.findAllByRole('alert');
+ expect(screen.getByRole('textbox',{name:'اسم البرنامج'})).toHaveValue('تعديل غير محفوظ');
+ expect(screen.getByText('لديك تغييرات غير محفوظة')).toBeInTheDocument();
+});
+it('creates through one request and navigates to the authoritative database UUID',async()=>{
+ const data=createAdminSnapshot(programs,offerings,branches);
+ const id='aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa';
+ const fetcher=vi.fn().mockResolvedValue({ok:true,status:200,json:async()=>({program:{...data.programs[0],id,slug:'new-persisted',version:1}})});vi.stubGlobal('fetch',fetcher);
+ render(<AdminProvider initial={data} userName="مدير النظام" persistentPrograms><ProgramEditor id="new"/></AdminProvider>);
+ fireEvent.change(screen.getByRole('textbox',{name:'اسم البرنامج'}),{target:{value:'برنامج جديد'}});
+ fireEvent.click(screen.getByRole('button',{name:'الظهور في الموقع'}));
+ fireEvent.change(screen.getByRole('textbox',{name:'رابط البرنامج'}),{target:{value:'new-persisted'}});
+ fireEvent.click(screen.getByRole('button',{name:'حفظ التغييرات'}));
+ await waitFor(()=>expect(navigation.replace).toHaveBeenCalledWith('/admin/programs/'+id));
+ expect(fetcher).toHaveBeenCalledTimes(1);
+ const sent=JSON.parse(fetcher.mock.calls[0][1].body);expect(sent.id).toBeUndefined();expect(sent.expectedVersion).toBe(0);
+});

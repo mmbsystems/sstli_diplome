@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-09-13T16:53:51.065Z",
+  "counts": {
+    "programs": 53,
+    "branches": 17,
+    "program_offerings": 83,
+    "curriculum_items": 80,
+    "career_paths": 124
+  },
+  "allBaselineRowsExactlyUnchanged": true,
+  "retainedBranchUnchanged": true,
+  "retainedBranchLinkedOfferings": 0,
+  "manifestSHA256": "f65d96c408be1cf46996c29312b8a251ea37d7d06c8c7949f2f4b4fb20a095a1",
+  "adminDataSource": "supabase"
+}

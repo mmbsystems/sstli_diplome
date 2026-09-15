@@ -1,0 +1,264 @@
+{
+  "audit": [
+    {
+      "id": "aef94822-d452-4484-a18d-16d6ad131fa8",
+      "action": "create",
+      "actor_label": "مدير النظام",
+      "entity_type": "programs",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "e5e41eb0-6ace-4b1f-afb8-5cc606a06cd7"
+      }
+    },
+    {
+      "id": "94ed401d-4209-4aff-80be-6dd6e240bbe2",
+      "action": "update",
+      "actor_label": "مدير النظام",
+      "entity_type": "programs",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "343c41fc-a216-48f3-bb71-de894e3fda2f"
+      }
+    },
+    {
+      "id": "1f474865-3fe1-4d18-ac22-3126ff4997b9",
+      "action": "create",
+      "actor_label": "مدير النظام",
+      "entity_type": "curriculum_items",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "d56ae7c2-4ae3-43d8-9dcf-fc2e714aa99f"
+      }
+    },
+    {
+      "id": "7aedd395-d98d-4c80-8ebd-9e1c8cd09fd7",
+      "action": "create",
+      "actor_label": "مدير النظام",
+      "entity_type": "curriculum_items",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "d56ae7c2-4ae3-43d8-9dcf-fc2e714aa99f"
+      }
+    },
+    {
+      "id": "de7e32a5-4e93-4989-be1b-3414a15e6106",
+      "action": "create",
+      "actor_label": "مدير النظام",
+      "entity_type": "curriculum_items",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "d56ae7c2-4ae3-43d8-9dcf-fc2e714aa99f"
+      }
+    },
+    {
+      "id": "2ee00d35-e0ba-440e-848d-c22ffbb36143",
+      "action": "update",
+      "actor_label": "مدير النظام",
+      "entity_type": "curriculum_items",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "641576ca-2fd6-42d1-9c5a-f040c44e208c"
+      }
+    },
+    {
+      "id": "f808ca86-fab4-449a-853e-3afdd4b8d5d3",
+      "action": "update",
+      "actor_label": "مدير النظام",
+      "entity_type": "curriculum_items",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "641576ca-2fd6-42d1-9c5a-f040c44e208c"
+      }
+    },
+    {
+      "id": "7a8a4b02-b25a-41fb-8cc4-ff8d802732a7",
+      "action": "create",
+      "actor_label": "مدير النظام",
+      "entity_type": "career_paths",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "7e242d11-13e5-4ae4-bea4-eb1698773a63"
+      }
+    },
+    {
+      "id": "9e825f72-47d2-4fb8-a872-f6480010cb95",
+      "action": "create",
+      "actor_label": "مدير النظام",
+      "entity_type": "career_paths",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "7e242d11-13e5-4ae4-bea4-eb1698773a63"
+      }
+    },
+    {
+      "id": "dd4af544-5d85-440e-b469-5b78465e88f9",
+      "action": "create",
+      "actor_label": "مدير النظام",
+      "entity_type": "career_paths",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "7e242d11-13e5-4ae4-bea4-eb1698773a63"
+      }
+    },
+    {
+      "id": "0a70b76c-4115-4dc8-a5a0-774aa05fc0a2",
+      "action": "update",
+      "actor_label": "مدير النظام",
+      "entity_type": "career_paths",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "90f46b9d-0d81-43ad-9351-9a0aedca71d7"
+      }
+    },
+    {
+      "id": "0cf6eec5-a4cc-4dea-ae65-8132dd886704",
+      "action": "update",
+      "actor_label": "مدير النظام",
+      "entity_type": "career_paths",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "90f46b9d-0d81-43ad-9351-9a0aedca71d7"
+      }
+    },
+    {
+      "id": "b6c503a8-c961-4c01-8ff6-02c36f9ac37c",
+      "action": "delete",
+      "actor_label": "مدير النظام",
+      "entity_type": "curriculum_items",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "aec8d4ae-713d-46c9-97a7-4f3024e1169c"
+      }
+    },
+    {
+      "id": "e1b02989-d3fb-45e1-b7ea-e4c4912080bc",
+      "action": "delete",
+      "actor_label": "مدير النظام",
+      "entity_type": "career_paths",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "aec8d4ae-713d-46c9-97a7-4f3024e1169c"
+      }
+    },
+    {
+      "id": "cccd8399-bdf1-4422-a931-11f5b87af352",
+      "action": "archive",
+      "actor_label": "مدير النظام",
+      "entity_type": "programs",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "b7066205-65fd-4cc0-a13e-40b42e65441f"
+      }
+    },
+    {
+      "id": "d108003c-3495-4de5-9cbb-a4a5ae1fbf76",
+      "action": "restore",
+      "actor_label": "مدير النظام",
+      "entity_type": "programs",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "8a10b602-de1e-44f9-9861-18fd0a9a494e"
+      }
+    },
+    {
+      "id": "1d775b43-a1d5-42af-afb1-b221342052ee",
+      "action": "delete",
+      "actor_label": "Database maintenance",
+      "entity_type": "programs",
+      "legacy_actor": null
+    },
+    {
+      "id": "4ce8b813-6371-442e-bc00-eb96b1ff62cc",
+      "action": "delete",
+      "actor_label": "Database maintenance",
+      "entity_type": "curriculum_items",
+      "legacy_actor": null
+    },
+    {
+      "id": "636f2e37-776a-4f94-9b7a-091b36354574",
+      "action": "delete",
+      "actor_label": "Database maintenance",
+      "entity_type": "career_paths",
+      "legacy_actor": null
+    },
+    {
+      "id": "7fc8db11-9ea2-4bb8-97cd-46a13ed6a796",
+      "action": "delete",
+      "actor_label": "Database maintenance",
+      "entity_type": "curriculum_items",
+      "legacy_actor": null
+    },
+    {
+      "id": "bf61f9af-4f16-404d-8579-52d209aeedde",
+      "action": "delete",
+      "actor_label": "Database maintenance",
+      "entity_type": "career_paths",
+      "legacy_actor": null
+    }
+  ],
+  "audit_count": 21,
+  "counts_hashes": [
+    {
+      "hash": "8e01373aa59d897ba1ec8db216b72a08",
+      "name": "programs",
+      "count": 53
+    },
+    {
+      "hash": "7adaf9020f7de78115706456ee459c48",
+      "name": "branches",
+      "count": 16
+    },
+    {
+      "hash": "83ed00c75cd6e94ce6731d6c25a8522f",
+      "name": "program_offerings",
+      "count": 83
+    },
+    {
+      "hash": "93ef24ce0bd6764dce699b3ce32b7fd9",
+      "name": "curriculum_items",
+      "count": 80
+    },
+    {
+      "hash": "ac7dc776714c4172da3646b0fe43249e",
+      "name": "career_paths",
+      "count": 124
+    },
+    {
+      "hash": "fc5cae53be866d50625b2cfae519be29",
+      "name": "auth_users",
+      "count": 1
+    }
+  ]
+}

@@ -11,6 +11,9 @@ export function isSameOrigin(request: NextRequest) {
 }
 
 export async function readLoginBody(request: NextRequest): Promise<{username?: unknown; password?: unknown}> {
+  return readJsonBody(request);
+}
+export async function readJsonBody(request: NextRequest): Promise<Record<string, unknown>> {
   if (!request.headers.get('content-type')?.toLowerCase().startsWith('application/json')) throw new Error('Invalid body');
   if (Number(request.headers.get('content-length')) > 4096) throw new Error('Invalid body');
   const reader = request.body?.getReader();

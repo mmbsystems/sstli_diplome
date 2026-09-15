@@ -103,5 +103,11 @@
     "name": "فرع الدمام — حي الزهور",
     "passwordHash": "$2b$12$35kWueuqfX64ExVH2sJTw.y27LsLG5e2mLW3RRRFHtJxPGkJc0cd2",
     "branch": "الدمام — حي الزهور"
+  },
+  {
+    "username": "admin",
+    "name": "مدير النظام",
+    "role": "super_admin",
+    "passwordHash": "$2b$12$SEBMTYINBaY3JGuWoYqJiOnjYwTMgZzuQUPCNeZaUWROpSOGxk3Q6"
   }
 ]

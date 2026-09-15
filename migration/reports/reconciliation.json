@@ -1,0 +1,42 @@
+{
+  "sourceFingerprint": "61b1cb418837450e3a35dbc0f9b92a0a67c808ca5e473dcdd785ed7303b2cf5b",
+  "counts": {
+    "programs": 53,
+    "branches": 16,
+    "program_offerings": 83,
+    "curriculum_items": 80,
+    "career_paths": 124
+  },
+  "sourceValidation": {
+    "counts": {
+      "programs": 53,
+      "offerings": 83,
+      "declaredBranches": 13,
+      "usedBranches": 15,
+      "unionBranches": 16,
+      "curriculumItems": 80,
+      "careerPaths": 124
+    },
+    "errors": [],
+    "warnings": [
+      "program without offerings: accounting",
+      "unresolved branch: الدمام::فرع الدمام",
+      "unresolved branch: الدمام::حي الشاطئ",
+      "unresolved branch: الدمام::حي الزهور"
+    ],
+    "unresolvedBranches": [
+      "الدمام::فرع الدمام",
+      "الدمام::حي الشاطئ",
+      "الدمام::حي الزهور"
+    ]
+  },
+  "errors": [],
+  "preservedWarnings": [
+    "program without offerings: accounting",
+    "unresolved branch: الدمام::فرع الدمام",
+    "unresolved branch: الدمام::حي الشاطئ",
+    "unresolved branch: الدمام::حي الزهور"
+  ],
+  "policy": "draft-hidden-inactive-registration-unknown",
+  "payloadSha256": "0967bda4eb8d37b4112bbbaca1eb26a40f194b875b0f24c909efdc68f0cb07a4"
+}

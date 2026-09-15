@@ -1,0 +1,2452 @@
+{
+  "manifestVersion": 1,
+  "createdAt": "2026-09-12T11:14:44.671Z",
+  "sourceFingerprint": "61b1cb418837450e3a35dbc0f9b92a0a67c808ca5e473dcdd785ed7303b2cf5b",
+  "sourceCounts": {
+    "programs": 53,
+    "offerings": 83,
+    "declaredBranches": 13,
+    "usedBranches": 15,
+    "unionBranches": 16,
+    "curriculumItems": 80,
+    "careerPaths": 124
+  },
+  "schemaTargetVersion": "20260912105826",
+  "supabaseProjectRef": "crzedkbjvujcmcikgvoe",
+  "auxiliarySourceHashes": {
+    "data/regions.ts": "18bfb731440ff00e908ec9529dd5613de700d15239cbf9dcc19808bb331bf15b",
+    "lib/installments.ts": "618562ec8dd5bb8edcdff3009db4c76e53bd5e3353d08927b7d93ad175fe9edb",
+    "lib/supabase/database.generated.ts": "244b95fa71aa139eca1ce7e120388a006046f7872a91713a98518a6e3d770041",
+    "supabase/migrations/20260910000100_catalog_foundation.sql": "e91a248fa76179ae3d8c3127d3dd45da20db6da55265c5e05405cc5ee50d7a34"
+  },
+  "policy": "draft-hidden-inactive-registration-unknown",
+  "programs": [
+    {
+      "identity": "law",
+      "sourceIndex": 0,
+      "uuid": "6b44bf43-92f1-4524-9301-10a664d7b678"
+    },
+    {
+      "identity": "hospital",
+      "sourceIndex": 1,
+      "uuid": "c7d87d01-518d-4b3f-b605-5c487efde3fb"
+    },
+    {
+      "identity": "nursing",
+      "sourceIndex": 2,
+      "uuid": "470f35fc-0831-4ecb-910a-f919c5311659"
+    },
+    {
+      "identity": "cyber",
+      "sourceIndex": 3,
+      "uuid": "fae41a87-565d-49b9-84c1-8e28a3ad8aac"
+    },
+    {
+      "identity": "ai",
+      "sourceIndex": 4,
+      "uuid": "36bb6ea3-400d-4ffe-af76-e0d4fa2bb47a"
+    },
+    {
+      "identity": "safety",
+      "sourceIndex": 5,
+      "uuid": "9f381dc8-010a-4f7c-bb4b-de59bd53119a"
+    },
+    {
+      "identity": "business",
+      "sourceIndex": 6,
+      "uuid": "65dca600-6946-404b-b1bc-c19cc3b4965f"
+    },
+    {
+      "identity": "hr",
+      "sourceIndex": 7,
+      "uuid": "1d3b13e4-9a92-454e-9c97-93118f5e4e9d"
+    },
+    {
+      "identity": "office-diploma",
+      "sourceIndex": 8,
+      "uuid": "a15623dc-90a0-428c-9725-f92d786bba5c"
+    },
+    {
+      "identity": "cx",
+      "sourceIndex": 9,
+      "uuid": "0ef61529-6f9d-49be-9a30-a098130b0cf3"
+    },
+    {
+      "identity": "accounting",
+      "sourceIndex": 10,
+      "uuid": "9d9e185e-1370-4c0a-ba00-342489b3a914"
+    },
+    {
+      "identity": "q-office-3",
+      "sourceIndex": 11,
+      "uuid": "62aad8ef-653c-452b-9a9f-e28db56c5189"
+    },
+    {
+      "identity": "q-office-6",
+      "sourceIndex": 12,
+      "uuid": "1fd7ec2b-63a0-412c-b205-af78db335323"
+    },
+    {
+      "identity": "q-data",
+      "sourceIndex": 13,
+      "uuid": "507277fc-8cdc-46bf-86ec-eb6ba88d7a29"
+    },
+    {
+      "identity": "q-computer",
+      "sourceIndex": 14,
+      "uuid": "ed177b3a-65a0-455a-8980-fd801c872421"
+    },
+    {
+      "identity": "q-office-11",
+      "sourceIndex": 15,
+      "uuid": "b6e21838-6cb1-486b-b671-62ec7d7c2a67"
+    },
+    {
+      "identity": "q-archive-3",
+      "sourceIndex": 16,
+      "uuid": "8f3375dd-5b04-41f8-9f72-aacc5bb50444"
+    },
+    {
+      "identity": "q-archive-6",
+      "sourceIndex": 17,
+      "uuid": "e18ba0f7-0ec6-480e-9292-5841d5b8c7fc"
+    },
+    {
+      "identity": "english-1",
+      "sourceIndex": 18,
+      "uuid": "d689cc9d-2c7f-4da9-b140-8d7676f23edf"
+    },
+    {
+      "identity": "english-2",
+      "sourceIndex": 19,
+      "uuid": "93420345-fca8-4cdb-8e46-8e38183fad44"
+    },
+    {
+      "identity": "english-3",
+      "sourceIndex": 20,
+      "uuid": "e134de15-ea9e-4e3c-859c-444c8dd96f7a"
+    },
+    {
+      "identity": "english-4",
+      "sourceIndex": 21,
+      "uuid": "2cf1dd20-45c2-4ba3-a914-d2aa04800f80"
+    },
+    {
+      "identity": "d-computer-intro",
+      "sourceIndex": 22,
+      "uuid": "eeba1f2b-7987-48ca-9cb5-6e54c9bbad95"
+    },
+    {
+      "identity": "d-typing-skills",
+      "sourceIndex": 23,
+      "uuid": "8176dc65-b1e1-4f97-b273-18493f7f3223"
+    },
+    {
+      "identity": "d-priorities",
+      "sourceIndex": 24,
+      "uuid": "69da55fc-9b46-42f8-85b2-dc458e4f5fe5"
+    },
+    {
+      "identity": "d-success-strategies",
+      "sourceIndex": 25,
+      "uuid": "09ee1d59-7850-41ac-bf25-ac59afe3259a"
+    },
+    {
+      "identity": "d-office-basics",
+      "sourceIndex": 26,
+      "uuid": "1438d189-49c4-44f9-932e-6dff59b7b612"
+    },
+    {
+      "identity": "d-personal-governance",
+      "sourceIndex": 27,
+      "uuid": "bade39c7-5244-4e2c-a307-2a95bfe64efb"
+    },
+    {
+      "identity": "d-program-project-management",
+      "sourceIndex": 28,
+      "uuid": "b427e1a0-5cd1-40ab-9f6d-ef40ef6400e2"
+    },
+    {
+      "identity": "d-financial-resources",
+      "sourceIndex": 29,
+      "uuid": "f72aadaa-a428-4dfe-9995-f98694140a2d"
+    },
+    {
+      "identity": "d-hr-basics",
+      "sourceIndex": 30,
+      "uuid": "d0a93404-8ddd-41e7-a7b1-0a3e85b838de"
+    },
+    {
+      "identity": "d-osha",
+      "sourceIndex": 31,
+      "uuid": "0fb4fee7-9507-4bc6-bfcb-45d9c289433e"
+    },
+    {
+      "identity": "d-electronic-archiving",
+      "sourceIndex": 32,
+      "uuid": "d3bfd253-6c71-4e05-957e-5107d76f9179"
+    },
+    {
+      "identity": "d-computer-skills-1",
+      "sourceIndex": 33,
+      "uuid": "74ccbcf3-bdaf-4d79-b87c-799caa2eeba4"
+    },
+    {
+      "identity": "d-computer-skills-2",
+      "sourceIndex": 34,
+      "uuid": "d6c468d3-5cad-425f-86b6-04dda99b1f0d"
+    },
+    {
+      "identity": "d-computer-skills-3",
+      "sourceIndex": 35,
+      "uuid": "707e83d4-a964-45eb-b5bf-41bdae01324d"
+    },
+    {
+      "identity": "d-computer-apps",
+      "sourceIndex": 36,
+      "uuid": "54883341-35c8-42ae-a103-24e099bb7fd1"
+    },
+    {
+      "identity": "d-computer-apps-basic",
+      "sourceIndex": 37,
+      "uuid": "c9f3521b-4397-4962-9683-9fa7d4ae4f0e"
+    },
+    {
+      "identity": "d-computer-apps-advanced",
+      "sourceIndex": 38,
+      "uuid": "c7a1f8b5-9596-4fc5-9b8f-a1f023dfe31d"
+    },
+    {
+      "identity": "d-warehouses",
+      "sourceIndex": 39,
+      "uuid": "babfd074-9e1d-411f-ac42-45025e476171"
+    },
+    {
+      "identity": "d-cyber-skills",
+      "sourceIndex": 40,
+      "uuid": "87e2abaa-7a81-4ce0-9944-f51faa1464c9"
+    },
+    {
+      "identity": "d-ai-applications",
+      "sourceIndex": 41,
+      "uuid": "395c2df4-742b-4a2f-991b-d3a5634879f9"
+    },
+    {
+      "identity": "d-web-stores",
+      "sourceIndex": 42,
+      "uuid": "5021040b-67b5-4583-933f-f6189d0b56ed"
+    },
+    {
+      "identity": "d-insurance-basics",
+      "sourceIndex": 43,
+      "uuid": "22ab54f7-c0c2-465e-b554-6f28ec63cc19"
+    },
+    {
+      "identity": "d-nebosh-250",
+      "sourceIndex": 44,
+      "uuid": "ff9decc0-fcdd-49de-a277-068dae1f7fcf"
+    },
+    {
+      "identity": "d-autocad",
+      "sourceIndex": 45,
+      "uuid": "4a093654-0f28-4038-acfd-e5eb986d2b26"
+    },
+    {
+      "identity": "d-leadership",
+      "sourceIndex": 46,
+      "uuid": "ca829d2b-3ffc-4500-a2e1-8ec6ae4daf27"
+    },
+    {
+      "identity": "d-customer-service",
+      "sourceIndex": 47,
+      "uuid": "70d0cb50-9022-471e-9778-d189c4cff54e"
+    },
+    {
+      "identity": "d-marketing",
+      "sourceIndex": 48,
+      "uuid": "a0e0d1e4-cddc-4c57-b116-2dbef65c4e0f"
+    },
+    {
+      "identity": "d-tot",
+      "sourceIndex": 49,
+      "uuid": "e325ccd9-0d58-4dc8-9824-d6cfaf657764"
+    },
+    {
+      "identity": "d-financial-accounting",
+      "sourceIndex": 50,
+      "uuid": "4f6ef77a-79e9-421d-aa02-97aa6a0933e4"
+    },
+    {
+      "identity": "d-cash-operations",
+      "sourceIndex": 51,
+      "uuid": "ac0150ae-b7c9-4ea6-a531-23d3b99129a0"
+    },
+    {
+      "identity": "d-nebosh-300",
+      "sourceIndex": 52,
+      "uuid": "8c4acfe8-b6fe-4396-addd-97b24d3bf937"
+    }
+  ],
+  "branches": [
+    {
+      "identity": "الرياض::حي الحمراء",
+      "city": "الرياض",
+      "branch": "حي الحمراء",
+      "directoryListed": true,
+      "sourceRegionLabel": "الرياض",
+      "sourceIndex": 0,
+      "uuid": "f396f569-91b4-458f-89f5-cb153c3bd3cf"
+    },
+    {
+      "identity": "الرياض::حي ظهرة لبن",
+      "city": "الرياض",
+      "branch": "حي ظهرة لبن",
+      "directoryListed": true,
+      "sourceRegionLabel": "الرياض",
+      "sourceIndex": 1,
+      "uuid": "ed277749-0c9f-4f2b-b935-31b66025d6bd"
+    },
+    {
+      "identity": "الرياض::حي الأندلس",
+      "city": "الرياض",
+      "branch": "حي الأندلس",
+      "directoryListed": true,
+      "sourceRegionLabel": "الرياض",
+      "sourceIndex": 2,
+      "uuid": "476d75b7-9df2-405f-89a9-e2c57e3fcd51"
+    },
+    {
+      "identity": "الدمام::حي الزهور 1",
+      "city": "الدمام",
+      "branch": "حي الزهور 1",
+      "directoryListed": true,
+      "sourceRegionLabel": "الدمام",
+      "sourceIndex": 3,
+      "uuid": "2b4c2e6b-4686-4466-a885-c963a1f2b9fc"
+    },
+    {
+      "identity": "الدمام::حي الزهور 2",
+      "city": "الدمام",
+      "branch": "حي الزهور 2",
+      "directoryListed": true,
+      "sourceRegionLabel": "الدمام",
+      "sourceIndex": 4,
+      "uuid": "ae16f8ed-ece5-4d14-b7e8-568ed0673c03"
+    },
+    {
+      "identity": "الدمام::حي الشاطئ الغربي",
+      "city": "الدمام",
+      "branch": "حي الشاطئ الغربي",
+      "directoryListed": true,
+      "sourceRegionLabel": "الدمام",
+      "sourceIndex": 5,
+      "uuid": "c41a9200-ed0e-44bf-b1e1-4441da6c20e8"
+    },
+    {
+      "identity": "حفر الباطن::حي الواحة",
+      "city": "حفر الباطن",
+      "branch": "حي الواحة",
+      "directoryListed": true,
+      "sourceRegionLabel": "حفر الباطن",
+      "sourceIndex": 6,
+      "uuid": "88f55ebc-7860-4bf0-980a-2e8652e8d0b4"
+    },
+    {
+      "identity": "حفر الباطن::حي المصيف",
+      "city": "حفر الباطن",
+      "branch": "حي المصيف",
+      "directoryListed": true,
+      "sourceRegionLabel": "حفر الباطن",
+      "sourceIndex": 7,
+      "uuid": "ce9cad38-df59-4dc6-a3a9-efb377a5137e"
+    },
+    {
+      "identity": "خميس مشيط::حي الظرفة",
+      "city": "خميس مشيط",
+      "branch": "حي الظرفة",
+      "directoryListed": true,
+      "sourceRegionLabel": "خميس مشيط",
+      "sourceIndex": 8,
+      "uuid": "5d08b813-a798-4eaa-9d73-a3ffc52ae0d3"
+    },
+    {
+      "identity": "خميس مشيط::سكوير",
+      "city": "خميس مشيط",
+      "branch": "سكوير",
+      "directoryListed": true,
+      "sourceRegionLabel": "خميس مشيط",
+      "sourceIndex": 9,
+      "uuid": "47fdbc4a-6518-4433-804f-e2a81989e6d5"
+    },
+    {
+      "identity": "خميس مشيط::حي الضيافة",
+      "city": "خميس مشيط",
+      "branch": "حي الضيافة",
+      "directoryListed": true,
+      "sourceRegionLabel": null,
+      "sourceIndex": 10,
+      "uuid": "5c9f9a3d-7cf0-433f-b7ef-13eda5ef7d0d"
+    },
+    {
+      "identity": "المدينة المنورة::فرع المدينة المنورة",
+      "city": "المدينة المنورة",
+      "branch": "فرع المدينة المنورة",
+      "directoryListed": true,
+      "sourceRegionLabel": "المدينة المنورة",
+      "sourceIndex": 11,
+      "uuid": "7f76fbd8-d2ee-4125-af9b-5b2bb33653ba"
+    },
+    {
+      "identity": "سكاكا / الجوف::فرع سكاكا",
+      "city": "سكاكا / الجوف",
+      "branch": "فرع سكاكا",
+      "directoryListed": true,
+      "sourceRegionLabel": "سكاكا / الجوف",
+      "sourceIndex": 12,
+      "uuid": "a6405935-f76f-405b-bbd2-1973741d4894"
+    },
+    {
+      "identity": "الدمام::فرع الدمام",
+      "city": "الدمام",
+      "branch": "فرع الدمام",
+      "directoryListed": false,
+      "sourceRegionLabel": "الدمام",
+      "sourceIndex": 13,
+      "uuid": "4f807140-8c78-4d06-991f-29c02f8dfc39"
+    },
+    {
+      "identity": "الدمام::حي الشاطئ",
+      "city": "الدمام",
+      "branch": "حي الشاطئ",
+      "directoryListed": false,
+      "sourceRegionLabel": "الدمام",
+      "sourceIndex": 14,
+      "uuid": "4d9f3f70-093a-456c-bd80-90ef61674ce8"
+    },
+    {
+      "identity": "الدمام::حي الزهور",
+      "city": "الدمام",
+      "branch": "حي الزهور",
+      "directoryListed": false,
+      "sourceRegionLabel": "الدمام",
+      "sourceIndex": 15,
+      "uuid": "c2860195-ac90-4cd4-86d5-5d8e07bf91af"
+    }
+  ],
+  "offerings": [
+    {
+      "identity": "[\"law\",\"الرياض\",\"حي الحمراء\",\"onsite\",\"female\"]",
+      "legacyId": "off-1",
+      "sourceIndex": 0,
+      "sourceActive": true,
+      "uuid": "5d896f69-d94f-4b48-b1af-43fe5dcc0ecd"
+    },
+    {
+      "identity": "[\"hospital\",\"الرياض\",\"حي الحمراء\",\"onsite\",\"female\"]",
+      "legacyId": "off-2",
+      "sourceIndex": 1,
+      "sourceActive": true,
+      "uuid": "30373575-c88b-4e94-8fa5-ff1cfbe5d1db"
+    },
+    {
+      "identity": "[\"cyber\",\"الرياض\",\"حي الحمراء\",\"onsite\",\"both\"]",
+      "legacyId": "off-3",
+      "sourceIndex": 2,
+      "sourceActive": true,
+      "uuid": "ae6ed39a-3e20-4692-bde6-7c9184fc19f5"
+    },
+    {
+      "identity": "[\"law\",\"الرياض\",\"حي ظهرة لبن\",\"onsite\",\"male\"]",
+      "legacyId": "off-4",
+      "sourceIndex": 3,
+      "sourceActive": true,
+      "uuid": "88aa031f-f04d-4679-84e8-e4d1a7f02aa1"
+    },
+    {
+      "identity": "[\"hospital\",\"الرياض\",\"حي ظهرة لبن\",\"onsite\",\"male\"]",
+      "legacyId": "off-5",
+      "sourceIndex": 4,
+      "sourceActive": true,
+      "uuid": "0f59b0f8-2e1d-4501-8683-2e0837f28b02"
+    },
+    {
+      "identity": "[\"hr\",\"الرياض\",\"حي ظهرة لبن\",\"onsite\",\"male\"]",
+      "legacyId": "off-6",
+      "sourceIndex": 5,
+      "sourceActive": true,
+      "uuid": "8663672a-0864-4c52-baa3-e99eaf1929b2"
+    },
+    {
+      "identity": "[\"office-diploma\",\"الرياض\",\"حي ظهرة لبن\",\"onsite\",\"male\"]",
+      "legacyId": "off-7",
+      "sourceIndex": 6,
+      "sourceActive": true,
+      "uuid": "87999635-32a4-4614-a473-7a68c0984945"
+    },
+    {
+      "identity": "[\"nursing\",\"الرياض\",\"حي الأندلس\",\"onsite\",\"both\"]",
+      "legacyId": "off-8",
+      "sourceIndex": 7,
+      "sourceActive": true,
+      "uuid": "f89ab9b8-21c5-4013-91fc-9a3c4585fc95"
+    },
+    {
+      "identity": "[\"hospital\",\"الرياض\",\"حي الأندلس\",\"onsite\",\"male\"]",
+      "legacyId": "off-9",
+      "sourceIndex": 8,
+      "sourceActive": true,
+      "uuid": "559ee07e-5a0a-4f75-a611-427667ab12df"
+    },
+    {
+      "identity": "[\"safety\",\"الرياض\",\"حي الأندلس\",\"onsite\",\"male\"]",
+      "legacyId": "off-10",
+      "sourceIndex": 9,
+      "sourceActive": true,
+      "uuid": "9147fcb8-f84e-4dee-b984-515301896267"
+    },
+    {
+      "identity": "[\"cx\",\"الرياض\",\"حي الأندلس\",\"onsite\",\"both\"]",
+      "legacyId": "off-11",
+      "sourceIndex": 10,
+      "sourceActive": true,
+      "uuid": "67ea89b1-0d9d-4e44-bb58-1a0b3a215620"
+    },
+    {
+      "identity": "[\"hr\",\"الرياض\",\"حي الأندلس\",\"online\",\"male\"]",
+      "legacyId": "off-12",
+      "sourceIndex": 11,
+      "sourceActive": true,
+      "uuid": "50bb8c14-45fd-42c4-92aa-c2e4bdb7323e"
+    },
+    {
+      "identity": "[\"law\",\"الدمام\",\"حي الزهور 1\",\"onsite\",\"male\"]",
+      "legacyId": "off-13",
+      "sourceIndex": 12,
+      "sourceActive": true,
+      "uuid": "2c0b2267-4641-42cd-a883-7fe7c4cc9d97"
+    },
+    {
+      "identity": "[\"hospital\",\"الدمام\",\"حي الزهور 1\",\"onsite\",\"male\"]",
+      "legacyId": "off-14",
+      "sourceIndex": 13,
+      "sourceActive": true,
+      "uuid": "a5481f41-5613-4e9b-964f-8bb7909aac2f"
+    },
+    {
+      "identity": "[\"cyber\",\"الدمام\",\"حي الزهور 1\",\"onsite\",\"male\"]",
+      "legacyId": "off-15",
+      "sourceIndex": 14,
+      "sourceActive": true,
+      "uuid": "a9ef0766-a7db-4db2-bf08-0de0ee630370"
+    },
+    {
+      "identity": "[\"nursing\",\"الدمام\",\"حي الزهور 1\",\"onsite\",\"male\"]",
+      "legacyId": "off-16",
+      "sourceIndex": 15,
+      "sourceActive": true,
+      "uuid": "9859d378-4ce0-44d1-9ba4-685a64d94f7e"
+    },
+    {
+      "identity": "[\"safety\",\"الدمام\",\"حي الزهور 1\",\"onsite\",\"male\"]",
+      "legacyId": "off-17",
+      "sourceIndex": 16,
+      "sourceActive": true,
+      "uuid": "ff13af6a-9f21-4c79-bd83-ea6ca8713dc1"
+    },
+    {
+      "identity": "[\"business\",\"الدمام\",\"حي الزهور 1\",\"onsite\",\"male\"]",
+      "legacyId": "off-18",
+      "sourceIndex": 17,
+      "sourceActive": true,
+      "uuid": "70a0ed49-5d41-4ee6-8bdc-7ff23eae8e61"
+    },
+    {
+      "identity": "[\"ai\",\"الدمام\",\"حي الزهور 1\",\"onsite\",\"male\"]",
+      "legacyId": "off-19",
+      "sourceIndex": 18,
+      "sourceActive": true,
+      "uuid": "9bae2ce3-a01d-4e5b-98f1-14561eff7cdd"
+    },
+    {
+      "identity": "[\"hospital\",\"الدمام\",\"حي الزهور 2\",\"onsite\",\"female\"]",
+      "legacyId": "off-20",
+      "sourceIndex": 19,
+      "sourceActive": true,
+      "uuid": "efd0641e-0aab-4410-9569-6836bb718b1a"
+    },
+    {
+      "identity": "[\"nursing\",\"الدمام\",\"حي الزهور 2\",\"onsite\",\"female\"]",
+      "legacyId": "off-21",
+      "sourceIndex": 20,
+      "sourceActive": true,
+      "uuid": "70a90ec9-7270-41a6-b0ba-19adaaa1741c"
+    },
+    {
+      "identity": "[\"cyber\",\"الدمام\",\"حي الزهور 2\",\"onsite\",\"female\"]",
+      "legacyId": "off-22",
+      "sourceIndex": 21,
+      "sourceActive": true,
+      "uuid": "05f75b3e-662f-4b16-a516-606d4c6a2a17"
+    },
+    {
+      "identity": "[\"law\",\"الدمام\",\"حي الزهور 2\",\"onsite\",\"female\"]",
+      "legacyId": "off-23",
+      "sourceIndex": 22,
+      "sourceActive": true,
+      "uuid": "53590778-e1a8-4c3d-b815-bf4f8e7d07be"
+    },
+    {
+      "identity": "[\"hr\",\"الدمام\",\"حي الشاطئ الغربي\",\"onsite\",\"male\"]",
+      "legacyId": "off-24",
+      "sourceIndex": 23,
+      "sourceActive": true,
+      "uuid": "99500912-25e4-4750-9f9a-22c6652ef1bb"
+    },
+    {
+      "identity": "[\"office-diploma\",\"الدمام\",\"حي الشاطئ الغربي\",\"onsite\",\"male\"]",
+      "legacyId": "off-25",
+      "sourceIndex": 24,
+      "sourceActive": true,
+      "uuid": "88cd6ecc-0b06-48b4-8599-6c75a20f89a8"
+    },
+    {
+      "identity": "[\"law\",\"الدمام\",\"فرع الدمام\",\"online\",\"both\"]",
+      "legacyId": "off-26",
+      "sourceIndex": 25,
+      "sourceActive": true,
+      "uuid": "bf294ced-a6fd-407a-b070-04dfcb21c9b2"
+    },
+    {
+      "identity": "[\"hr\",\"حفر الباطن\",\"حي الواحة\",\"onsite\",\"male\"]",
+      "legacyId": "off-27",
+      "sourceIndex": 26,
+      "sourceActive": true,
+      "uuid": "022f3b0c-7259-4aa8-9669-dc404f92f310"
+    },
+    {
+      "identity": "[\"office-diploma\",\"حفر الباطن\",\"حي الواحة\",\"onsite\",\"male\"]",
+      "legacyId": "off-28",
+      "sourceIndex": 27,
+      "sourceActive": true,
+      "uuid": "96b3bce3-58aa-40a0-b32d-aa192d9eb31c"
+    },
+    {
+      "identity": "[\"hr\",\"حفر الباطن\",\"حي المصيف\",\"online\",\"both\"]",
+      "legacyId": "off-29",
+      "sourceIndex": 28,
+      "sourceActive": true,
+      "uuid": "9c02276e-cae3-485e-8bfb-9a03d5be16c5"
+    },
+    {
+      "identity": "[\"nursing\",\"خميس مشيط\",\"حي الظرفة\",\"onsite\",\"both\"]",
+      "legacyId": "off-30",
+      "sourceIndex": 29,
+      "sourceActive": true,
+      "uuid": "c7b8ea54-c30c-4c50-b855-d2a3aa12b792"
+    },
+    {
+      "identity": "[\"hospital\",\"خميس مشيط\",\"حي الظرفة\",\"onsite\",\"female\"]",
+      "legacyId": "off-31",
+      "sourceIndex": 30,
+      "sourceActive": true,
+      "uuid": "143ef0fa-0518-4ff7-a292-167956ce0a4e"
+    },
+    {
+      "identity": "[\"office-diploma\",\"خميس مشيط\",\"حي الظرفة\",\"online\",\"both\"]",
+      "legacyId": "off-32",
+      "sourceIndex": 31,
+      "sourceActive": true,
+      "uuid": "272813aa-9ee1-4a97-9880-ed09c46458a2"
+    },
+    {
+      "identity": "[\"law\",\"خميس مشيط\",\"سكوير\",\"onsite\",\"male\"]",
+      "legacyId": "off-33",
+      "sourceIndex": 32,
+      "sourceActive": true,
+      "uuid": "737023d2-a79a-4b65-a5b4-a6c1695fc9a6"
+    },
+    {
+      "identity": "[\"hospital\",\"خميس مشيط\",\"سكوير\",\"onsite\",\"male\"]",
+      "legacyId": "off-34",
+      "sourceIndex": 33,
+      "sourceActive": true,
+      "uuid": "4932a740-e722-42e4-87af-96689d08461b"
+    },
+    {
+      "identity": "[\"hr\",\"خميس مشيط\",\"سكوير\",\"onsite\",\"male\"]",
+      "legacyId": "off-35",
+      "sourceIndex": 34,
+      "sourceActive": true,
+      "uuid": "f79de297-fb32-4919-a3ea-61f914202c5a"
+    },
+    {
+      "identity": "[\"office-diploma\",\"خميس مشيط\",\"سكوير\",\"onsite\",\"male\"]",
+      "legacyId": "off-36",
+      "sourceIndex": 35,
+      "sourceActive": true,
+      "uuid": "565d4493-f1b8-46e4-ac81-a1e03008d61d"
+    },
+    {
+      "identity": "[\"law\",\"المدينة المنورة\",\"فرع المدينة المنورة\",\"onsite\",\"female\"]",
+      "legacyId": "off-37",
+      "sourceIndex": 36,
+      "sourceActive": true,
+      "uuid": "26378f2a-af4c-4579-a85e-e5a1d0445cef"
+    },
+    {
+      "identity": "[\"hospital\",\"المدينة المنورة\",\"فرع المدينة المنورة\",\"onsite\",\"both\"]",
+      "legacyId": "off-38",
+      "sourceIndex": 37,
+      "sourceActive": true,
+      "uuid": "ea1b5c69-18c4-48c2-ac27-710a7413d45c"
+    },
+    {
+      "identity": "[\"nursing\",\"المدينة المنورة\",\"فرع المدينة المنورة\",\"onsite\",\"both\"]",
+      "legacyId": "off-39",
+      "sourceIndex": 38,
+      "sourceActive": true,
+      "uuid": "cba0f754-90a0-4e45-aca6-22d946535f2e"
+    },
+    {
+      "identity": "[\"hr\",\"المدينة المنورة\",\"فرع المدينة المنورة\",\"onsite\",\"male\"]",
+      "legacyId": "off-40",
+      "sourceIndex": 39,
+      "sourceActive": true,
+      "uuid": "fc5169da-c07a-4eb8-90b9-c0471da0cc27"
+    },
+    {
+      "identity": "[\"office-diploma\",\"المدينة المنورة\",\"فرع المدينة المنورة\",\"onsite\",\"male\"]",
+      "legacyId": "off-41",
+      "sourceIndex": 40,
+      "sourceActive": true,
+      "uuid": "fb506540-1718-458f-a577-0a62a3f626ed"
+    },
+    {
+      "identity": "[\"q-office-3\",\"سكاكا / الجوف\",\"فرع سكاكا\",\"onsite\",\"both\"]",
+      "legacyId": "off-42",
+      "sourceIndex": 41,
+      "sourceActive": true,
+      "uuid": "eef402e9-7e4c-41d6-a057-389467ac9972"
+    },
+    {
+      "identity": "[\"q-office-6\",\"سكاكا / الجوف\",\"فرع سكاكا\",\"onsite\",\"both\"]",
+      "legacyId": "off-43",
+      "sourceIndex": 42,
+      "sourceActive": true,
+      "uuid": "948c6515-e1fb-4ff5-b876-cc841e23c39d"
+    },
+    {
+      "identity": "[\"q-data\",\"سكاكا / الجوف\",\"فرع سكاكا\",\"onsite\",\"both\"]",
+      "legacyId": "off-44",
+      "sourceIndex": 43,
+      "sourceActive": true,
+      "uuid": "fa4409c0-4795-49d2-85db-a1d0ff1c1135"
+    },
+    {
+      "identity": "[\"q-computer\",\"سكاكا / الجوف\",\"فرع سكاكا\",\"onsite\",\"both\"]",
+      "legacyId": "off-45",
+      "sourceIndex": 44,
+      "sourceActive": true,
+      "uuid": "f777ae5f-ad37-49ca-80a9-71f577422cd9"
+    },
+    {
+      "identity": "[\"q-office-11\",\"حفر الباطن\",\"حي الواحة\",\"onsite\",\"male\"]",
+      "legacyId": "off-46",
+      "sourceIndex": 45,
+      "sourceActive": true,
+      "uuid": "5de43c89-a608-45d0-ae73-511c9c71f007"
+    },
+    {
+      "identity": "[\"q-archive-3\",\"الدمام\",\"فرع الدمام\",\"onsite\",\"both\"]",
+      "legacyId": "off-47",
+      "sourceIndex": 46,
+      "sourceActive": true,
+      "uuid": "41758650-7bf7-434a-9861-152c87ef49f3"
+    },
+    {
+      "identity": "[\"q-archive-6\",\"خميس مشيط\",\"حي الظرفة\",\"onsite\",\"both\"]",
+      "legacyId": "off-48",
+      "sourceIndex": 47,
+      "sourceActive": true,
+      "uuid": "7fc654a0-1d43-46dc-bfdc-0e346c8429fd"
+    },
+    {
+      "identity": "[\"english-1\",\"حفر الباطن\",\"حي المصيف\",\"onsite\",\"both\"]",
+      "legacyId": "off-49",
+      "sourceIndex": 48,
+      "sourceActive": true,
+      "uuid": "356e7943-e75c-4c8d-b44b-e33973f9247a"
+    },
+    {
+      "identity": "[\"english-2\",\"حفر الباطن\",\"حي المصيف\",\"onsite\",\"both\"]",
+      "legacyId": "off-50",
+      "sourceIndex": 49,
+      "sourceActive": true,
+      "uuid": "44640656-6eb0-4373-a74f-3ce4e5a5feca"
+    },
+    {
+      "identity": "[\"english-3\",\"حفر الباطن\",\"حي المصيف\",\"onsite\",\"both\"]",
+      "legacyId": "off-51",
+      "sourceIndex": 50,
+      "sourceActive": true,
+      "uuid": "a6e880c2-ddb1-45e8-b2a7-22da9b42abe5"
+    },
+    {
+      "identity": "[\"english-4\",\"حفر الباطن\",\"حي المصيف\",\"onsite\",\"both\"]",
+      "legacyId": "off-52",
+      "sourceIndex": 51,
+      "sourceActive": true,
+      "uuid": "856ce665-ef78-43ca-af51-30d178b9caeb"
+    },
+    {
+      "identity": "[\"d-computer-intro\",\"المدينة المنورة\",\"فرع المدينة المنورة\",\"onsite\",\"both\"]",
+      "legacyId": "off-53",
+      "sourceIndex": 52,
+      "sourceActive": true,
+      "uuid": "8477469f-b8d1-40c0-83e8-8ce58be9e6d5"
+    },
+    {
+      "identity": "[\"d-typing-skills\",\"المدينة المنورة\",\"فرع المدينة المنورة\",\"onsite\",\"both\"]",
+      "legacyId": "off-54",
+      "sourceIndex": 53,
+      "sourceActive": true,
+      "uuid": "9b084290-a8fd-4d71-80af-5705f6901dc0"
+    },
+    {
+      "identity": "[\"d-priorities\",\"المدينة المنورة\",\"فرع المدينة المنورة\",\"onsite\",\"both\"]",
+      "legacyId": "off-55",
+      "sourceIndex": 54,
+      "sourceActive": true,
+      "uuid": "fd74d5ba-bfef-4264-bda0-ff8f05eaa52c"
+    },
+    {
+      "identity": "[\"d-success-strategies\",\"المدينة المنورة\",\"فرع المدينة المنورة\",\"onsite\",\"both\"]",
+      "legacyId": "off-56",
+      "sourceIndex": 55,
+      "sourceActive": true,
+      "uuid": "2ab90456-257d-452d-a1f5-9785c6aac949"
+    },
+    {
+      "identity": "[\"d-office-basics\",\"المدينة المنورة\",\"فرع المدينة المنورة\",\"onsite\",\"both\"]",
+      "legacyId": "off-57",
+      "sourceIndex": 56,
+      "sourceActive": true,
+      "uuid": "4803aca4-baee-496a-bf22-36a32b35c5b5"
+    },
+    {
+      "identity": "[\"d-personal-governance\",\"المدينة المنورة\",\"فرع المدينة المنورة\",\"onsite\",\"both\"]",
+      "legacyId": "off-58",
+      "sourceIndex": 57,
+      "sourceActive": true,
+      "uuid": "72fd2adf-0f9e-4059-9673-5dbb65a002fb"
+    },
+    {
+      "identity": "[\"d-program-project-management\",\"المدينة المنورة\",\"فرع المدينة المنورة\",\"onsite\",\"both\"]",
+      "legacyId": "off-59",
+      "sourceIndex": 58,
+      "sourceActive": true,
+      "uuid": "0db02147-8525-4355-aa98-2d12f96cb698"
+    },
+    {
+      "identity": "[\"d-financial-resources\",\"المدينة المنورة\",\"فرع المدينة المنورة\",\"onsite\",\"both\"]",
+      "legacyId": "off-60",
+      "sourceIndex": 59,
+      "sourceActive": true,
+      "uuid": "4b92c63d-f2c5-4595-9bba-bd49d7ac0c7f"
+    },
+    {
+      "identity": "[\"d-hr-basics\",\"المدينة المنورة\",\"فرع المدينة المنورة\",\"onsite\",\"both\"]",
+      "legacyId": "off-61",
+      "sourceIndex": 60,
+      "sourceActive": true,
+      "uuid": "566c5f77-a67b-40aa-98ec-ad65ee017ab0"
+    },
+    {
+      "identity": "[\"d-osha\",\"حفر الباطن\",\"حي الواحة\",\"onsite\",\"male\"]",
+      "legacyId": "off-62",
+      "sourceIndex": 61,
+      "sourceActive": true,
+      "uuid": "58e8b10a-94d9-4199-b945-8373c3b87e1f"
+    },
+    {
+      "identity": "[\"d-electronic-archiving\",\"الدمام\",\"حي الشاطئ\",\"onsite\",\"both\"]",
+      "legacyId": "off-63",
+      "sourceIndex": 62,
+      "sourceActive": true,
+      "uuid": "07d457db-26d2-464a-8aa7-9cbea351e648"
+    },
+    {
+      "identity": "[\"d-computer-skills-1\",\"الدمام\",\"حي الشاطئ\",\"onsite\",\"both\"]",
+      "legacyId": "off-64",
+      "sourceIndex": 63,
+      "sourceActive": true,
+      "uuid": "4de8226a-ab36-4e00-9a70-29b89f9dba45"
+    },
+    {
+      "identity": "[\"d-computer-skills-2\",\"الدمام\",\"حي الشاطئ\",\"onsite\",\"both\"]",
+      "legacyId": "off-65",
+      "sourceIndex": 64,
+      "sourceActive": true,
+      "uuid": "9ebe1842-2d2e-49f7-b974-f3aadb13b514"
+    },
+    {
+      "identity": "[\"d-computer-skills-3\",\"الدمام\",\"حي الشاطئ\",\"onsite\",\"both\"]",
+      "legacyId": "off-66",
+      "sourceIndex": 65,
+      "sourceActive": true,
+      "uuid": "3aff38da-e880-49d8-a74d-98f44a51f7a6"
+    },
+    {
+      "identity": "[\"d-computer-apps\",\"الدمام\",\"حي الشاطئ\",\"onsite\",\"both\"]",
+      "legacyId": "off-67",
+      "sourceIndex": 66,
+      "sourceActive": true,
+      "uuid": "81111ddc-5ca2-4a70-8508-c55951a6688f"
+    },
+    {
+      "identity": "[\"d-computer-apps-basic\",\"الدمام\",\"حي الشاطئ\",\"onsite\",\"both\"]",
+      "legacyId": "off-68",
+      "sourceIndex": 67,
+      "sourceActive": true,
+      "uuid": "4a604511-8917-4203-9374-7cf89afb97cf"
+    },
+    {
+      "identity": "[\"d-computer-apps-advanced\",\"الدمام\",\"حي الشاطئ\",\"onsite\",\"both\"]",
+      "legacyId": "off-69",
+      "sourceIndex": 68,
+      "sourceActive": true,
+      "uuid": "37d5f378-ff50-485e-8ac8-a9fe106d371d"
+    },
+    {
+      "identity": "[\"d-warehouses\",\"الدمام\",\"حي الزهور\",\"onsite\",\"both\"]",
+      "legacyId": "off-70",
+      "sourceIndex": 69,
+      "sourceActive": true,
+      "uuid": "3f351982-35db-42f1-8430-0aba5ee73531"
+    },
+    {
+      "identity": "[\"d-cyber-skills\",\"الدمام\",\"حي الزهور\",\"onsite\",\"both\"]",
+      "legacyId": "off-71",
+      "sourceIndex": 70,
+      "sourceActive": true,
+      "uuid": "6a91b2b0-34ec-400f-a402-83225760e147"
+    },
+    {
+      "identity": "[\"d-ai-applications\",\"الدمام\",\"حي الزهور\",\"onsite\",\"both\"]",
+      "legacyId": "off-72",
+      "sourceIndex": 71,
+      "sourceActive": true,
+      "uuid": "dd27dcbe-31bc-495a-af63-92e1559e4f27"
+    },
+    {
+      "identity": "[\"d-web-stores\",\"الدمام\",\"حي الزهور\",\"onsite\",\"both\"]",
+      "legacyId": "off-73",
+      "sourceIndex": 72,
+      "sourceActive": true,
+      "uuid": "975d8020-2dcd-482a-a589-d34d5ab3cd2a"
+    },
+    {
+      "identity": "[\"d-insurance-basics\",\"الدمام\",\"حي الزهور\",\"onsite\",\"both\"]",
+      "legacyId": "off-74",
+      "sourceIndex": 73,
+      "sourceActive": true,
+      "uuid": "aac96153-92cc-42bb-b6f7-6ac09ed8cb79"
+    },
+    {
+      "identity": "[\"d-nebosh-250\",\"الدمام\",\"حي الزهور\",\"onsite\",\"both\"]",
+      "legacyId": "off-75",
+      "sourceIndex": 74,
+      "sourceActive": true,
+      "uuid": "9380147b-d7c8-42cc-9328-9dc00d16a261"
+    },
+    {
+      "identity": "[\"d-autocad\",\"الدمام\",\"حي الزهور\",\"onsite\",\"both\"]",
+      "legacyId": "off-76",
+      "sourceIndex": 75,
+      "sourceActive": true,
+      "uuid": "9a5763be-e1a4-490b-bd43-cae799b0ea9e"
+    },
+    {
+      "identity": "[\"d-leadership\",\"الدمام\",\"حي الزهور\",\"onsite\",\"both\"]",
+      "legacyId": "off-77",
+      "sourceIndex": 76,
+      "sourceActive": true,
+      "uuid": "65d5df45-5526-40fe-85d9-8977b78b7a4c"
+    },
+    {
+      "identity": "[\"d-customer-service\",\"الدمام\",\"حي الزهور\",\"onsite\",\"both\"]",
+      "legacyId": "off-78",
+      "sourceIndex": 77,
+      "sourceActive": true,
+      "uuid": "a77d8a21-c383-44f8-8c18-a2bba22f913d"
+    },
+    {
+      "identity": "[\"d-marketing\",\"الدمام\",\"حي الزهور\",\"onsite\",\"both\"]",
+      "legacyId": "off-79",
+      "sourceIndex": 78,
+      "sourceActive": true,
+      "uuid": "98f15023-8068-40db-9bc2-1891131c45ce"
+    },
+    {
+      "identity": "[\"d-tot\",\"الدمام\",\"حي الزهور\",\"onsite\",\"both\"]",
+      "legacyId": "off-80",
+      "sourceIndex": 79,
+      "sourceActive": true,
+      "uuid": "f530c5b5-702e-43fa-8df4-16ff60ec1f34"
+    },
+    {
+      "identity": "[\"d-financial-accounting\",\"الدمام\",\"حي الزهور\",\"onsite\",\"both\"]",
+      "legacyId": "off-81",
+      "sourceIndex": 80,
+      "sourceActive": true,
+      "uuid": "3e52a573-45fc-4826-b0a2-486cdbf2033b"
+    },
+    {
+      "identity": "[\"d-cash-operations\",\"الدمام\",\"حي الزهور\",\"onsite\",\"both\"]",
+      "legacyId": "off-82",
+      "sourceIndex": 81,
+      "sourceActive": true,
+      "uuid": "e82a1265-3fd3-4107-a52e-e26df5444684"
+    },
+    {
+      "identity": "[\"d-nebosh-300\",\"الدمام\",\"حي الزهور\",\"onsite\",\"both\"]",
+      "legacyId": "off-83",
+      "sourceIndex": 82,
+      "sourceActive": true,
+      "uuid": "d951f630-4d63-49f3-8a0b-3d19f11360cd"
+    }
+  ],
+  "curriculum": [
+    {
+      "identity": "[\"law\",0,\"مبادئ القانون\"]",
+      "programId": "law",
+      "sourceIndex": 0,
+      "title": "مبادئ القانون",
+      "uuid": "460c2f08-dc6d-4d97-8e91-e456696130bd"
+    },
+    {
+      "identity": "[\"law\",1,\"القانون الإداري\"]",
+      "programId": "law",
+      "sourceIndex": 1,
+      "title": "القانون الإداري",
+      "uuid": "6c3e40c5-f4a0-4266-899f-21bd14125cd8"
+    },
+    {
+      "identity": "[\"law\",2,\"القانون الجزائي العام\"]",
+      "programId": "law",
+      "sourceIndex": 2,
+      "title": "القانون الجزائي العام",
+      "uuid": "29b360ed-4a09-43ca-8880-fc42997e7527"
+    },
+    {
+      "identity": "[\"law\",3,\"المدخل للفقه الإسلامي\"]",
+      "programId": "law",
+      "sourceIndex": 3,
+      "title": "المدخل للفقه الإسلامي",
+      "uuid": "0ae879a1-4bdc-4195-8356-16a1ea61a345"
+    },
+    {
+      "identity": "[\"law\",4,\"أحكام الضمان\"]",
+      "programId": "law",
+      "sourceIndex": 4,
+      "title": "أحكام الضمان",
+      "uuid": "fc779a18-9baa-4c3c-a87b-d822cbd3d5ab"
+    },
+    {
+      "identity": "[\"law\",5,\"مصادر الالتزام\"]",
+      "programId": "law",
+      "sourceIndex": 5,
+      "title": "مصادر الالتزام",
+      "uuid": "cbfd33b6-e637-4e5e-8171-cd04bab455a2"
+    },
+    {
+      "identity": "[\"law\",6,\"أحكام الأسرة\"]",
+      "programId": "law",
+      "sourceIndex": 6,
+      "title": "أحكام الأسرة",
+      "uuid": "b966ed6e-6697-4cc9-bced-a3847f64ba73"
+    },
+    {
+      "identity": "[\"law\",7,\"القانون التجاري\"]",
+      "programId": "law",
+      "sourceIndex": 7,
+      "title": "القانون التجاري",
+      "uuid": "1cb57c8e-88b9-4467-b27c-10b50e38cfbe"
+    },
+    {
+      "identity": "[\"law\",8,\"نظام القضاء والإثبات\"]",
+      "programId": "law",
+      "sourceIndex": 8,
+      "title": "نظام القضاء والإثبات",
+      "uuid": "7694ca5d-ca69-4fc9-8369-61b4a9b3d806"
+    },
+    {
+      "identity": "[\"law\",9,\"أحكام الالتزام\"]",
+      "programId": "law",
+      "sourceIndex": 9,
+      "title": "أحكام الالتزام",
+      "uuid": "ebe331c8-0dd3-4dde-95af-6c6e556096cd"
+    },
+    {
+      "identity": "[\"law\",10,\"العقود الإدارية\"]",
+      "programId": "law",
+      "sourceIndex": 10,
+      "title": "العقود الإدارية",
+      "uuid": "df69b9f5-e5ba-4a23-afc6-c2a1588426c9"
+    },
+    {
+      "identity": "[\"law\",11,\"إجراءات التقاضي\"]",
+      "programId": "law",
+      "sourceIndex": 11,
+      "title": "إجراءات التقاضي",
+      "uuid": "862c8b93-7c12-4b99-bd92-f492fc3dc676"
+    },
+    {
+      "identity": "[\"law\",12,\"القانون الجزائي الخاص\"]",
+      "programId": "law",
+      "sourceIndex": 12,
+      "title": "القانون الجزائي الخاص",
+      "uuid": "51074155-45ac-46da-b1da-ee9bdc745781"
+    },
+    {
+      "identity": "[\"law\",13,\"العقود المدنية\"]",
+      "programId": "law",
+      "sourceIndex": 13,
+      "title": "العقود المدنية",
+      "uuid": "1b6182de-57e9-4b0d-ba82-43e9f6662333"
+    },
+    {
+      "identity": "[\"law\",14,\"نظام الزكاة والضرائب\"]",
+      "programId": "law",
+      "sourceIndex": 14,
+      "title": "نظام الزكاة والضرائب",
+      "uuid": "cb505a14-3764-4fc8-a720-e74419378e7a"
+    },
+    {
+      "identity": "[\"law\",15,\"قانون التنفيذ\"]",
+      "programId": "law",
+      "sourceIndex": 15,
+      "title": "قانون التنفيذ",
+      "uuid": "a8cf7ed2-d088-4cc6-9028-f7138be0d300"
+    },
+    {
+      "identity": "[\"law\",16,\"العقود التجارية وعمليات البنوك\"]",
+      "programId": "law",
+      "sourceIndex": 16,
+      "title": "العقود التجارية وعمليات البنوك",
+      "uuid": "8eb47f58-0986-4faa-87c4-0e1e6d63daf5"
+    },
+    {
+      "identity": "[\"law\",17,\"أحكام الملكية والأموال\"]",
+      "programId": "law",
+      "sourceIndex": 17,
+      "title": "أحكام الملكية والأموال",
+      "uuid": "4f05315b-9e2d-4b76-963d-298287c35106"
+    },
+    {
+      "identity": "[\"law\",18,\"الأوراق التجارية\"]",
+      "programId": "law",
+      "sourceIndex": 18,
+      "title": "الأوراق التجارية",
+      "uuid": "5dbf8b5d-14cf-4bd7-9cf8-8068d92a6db1"
+    },
+    {
+      "identity": "[\"law\",19,\"قانون العمل والتأمينات الاجتماعية\"]",
+      "programId": "law",
+      "sourceIndex": 19,
+      "title": "قانون العمل والتأمينات الاجتماعية",
+      "uuid": "d80a9255-ff4d-4715-809a-f9351c6e5775"
+    },
+    {
+      "identity": "[\"law\",20,\"الإجراءات الجزائية\"]",
+      "programId": "law",
+      "sourceIndex": 20,
+      "title": "الإجراءات الجزائية",
+      "uuid": "ce3b7744-bbd6-4d50-892e-e2139c8619f3"
+    },
+    {
+      "identity": "[\"law\",21,\"الإفلاس وطرق تسويته\"]",
+      "programId": "law",
+      "sourceIndex": 21,
+      "title": "الإفلاس وطرق تسويته",
+      "uuid": "2076b63f-548f-4a48-b5c3-e1204ef00889"
+    },
+    {
+      "identity": "[\"law\",22,\"التحكيم التجاري\"]",
+      "programId": "law",
+      "sourceIndex": 22,
+      "title": "التحكيم التجاري",
+      "uuid": "3f3cef3e-6a58-4b05-92c8-8b6527cbb815"
+    },
+    {
+      "identity": "[\"hospital\",0,\"مبادئ إدارة الأعمال\"]",
+      "programId": "hospital",
+      "sourceIndex": 0,
+      "title": "مبادئ إدارة الأعمال",
+      "uuid": "7d9e931c-2d5f-41fb-bd2b-d3c12a4900c3"
+    },
+    {
+      "identity": "[\"hospital\",1,\"إدارة المستشفيات\"]",
+      "programId": "hospital",
+      "sourceIndex": 1,
+      "title": "إدارة المستشفيات",
+      "uuid": "57bb3b38-b2d1-425a-907f-cae38ddfe002"
+    },
+    {
+      "identity": "[\"hospital\",2,\"إدارة الخدمات الصحية\"]",
+      "programId": "hospital",
+      "sourceIndex": 2,
+      "title": "إدارة الخدمات الصحية",
+      "uuid": "b73ca015-239d-4ba0-9f20-512177ea95fb"
+    },
+    {
+      "identity": "[\"hospital\",3,\"إدارة الموارد البشرية الصحية\"]",
+      "programId": "hospital",
+      "sourceIndex": 3,
+      "title": "إدارة الموارد البشرية الصحية",
+      "uuid": "0a362a31-657d-4a12-a3d0-b0255cd35a08"
+    },
+    {
+      "identity": "[\"hospital\",4,\"تسويق الخدمات الصحية\"]",
+      "programId": "hospital",
+      "sourceIndex": 4,
+      "title": "تسويق الخدمات الصحية",
+      "uuid": "69681e11-bf2d-49a7-9564-180757db4a45"
+    },
+    {
+      "identity": "[\"hospital\",5,\"نظم المعلومات الصحية\"]",
+      "programId": "hospital",
+      "sourceIndex": 5,
+      "title": "نظم المعلومات الصحية",
+      "uuid": "33b29e94-11a2-4047-b918-be06620d8de5"
+    },
+    {
+      "identity": "[\"hospital\",6,\"إدارة وضمان الجودة الصحية\"]",
+      "programId": "hospital",
+      "sourceIndex": 6,
+      "title": "إدارة وضمان الجودة الصحية",
+      "uuid": "f7a7ad4a-cbbc-41a2-9252-e0a10dd61b62"
+    },
+    {
+      "identity": "[\"hospital\",7,\"إدارة التأمين الصحي\"]",
+      "programId": "hospital",
+      "sourceIndex": 7,
+      "title": "إدارة التأمين الصحي",
+      "uuid": "c631fddc-15fd-4494-b2ee-69b0658467e3"
+    },
+    {
+      "identity": "[\"hospital\",8,\"إدارة المواد الصحية\"]",
+      "programId": "hospital",
+      "sourceIndex": 8,
+      "title": "إدارة المواد الصحية",
+      "uuid": "fa5dac6c-bd8d-4d06-9562-147b34aa3c7d"
+    },
+    {
+      "identity": "[\"hospital\",9,\"إعداد تقارير الخدمة الصحية باللغة الإنجليزية\"]",
+      "programId": "hospital",
+      "sourceIndex": 9,
+      "title": "إعداد تقارير الخدمة الصحية باللغة الإنجليزية",
+      "uuid": "5ec48a1c-8015-4850-bc68-a25355d5451c"
+    },
+    {
+      "identity": "[\"hospital\",10,\"موضوعات مختارة في إدارة المستشفيات\"]",
+      "programId": "hospital",
+      "sourceIndex": 10,
+      "title": "موضوعات مختارة في إدارة المستشفيات",
+      "uuid": "582627e6-a956-4a41-a1c3-996a77f22acd"
+    },
+    {
+      "identity": "[\"hospital\",11,\"تطبيقات الحاسب في إدارة المستشفيات\"]",
+      "programId": "hospital",
+      "sourceIndex": 11,
+      "title": "تطبيقات الحاسب في إدارة المستشفيات",
+      "uuid": "8eb0b696-3710-4503-9da9-acc759ae1e67"
+    },
+    {
+      "identity": "[\"nursing\",0,\"مبادئ إدارة الأعمال\"]",
+      "programId": "nursing",
+      "sourceIndex": 0,
+      "title": "مبادئ إدارة الأعمال",
+      "uuid": "c51ff9ca-a614-45ba-85c1-8a8bdfaf5add"
+    },
+    {
+      "identity": "[\"nursing\",1,\"السلوك التنظيمي في المنظمات الصحية\"]",
+      "programId": "nursing",
+      "sourceIndex": 1,
+      "title": "السلوك التنظيمي في المنظمات الصحية",
+      "uuid": "8f3b5ba7-167e-4a72-a929-8962416531e8"
+    },
+    {
+      "identity": "[\"nursing\",2,\"إدارة المستشفيات والخدمات الصحية\"]",
+      "programId": "nursing",
+      "sourceIndex": 2,
+      "title": "إدارة المستشفيات والخدمات الصحية",
+      "uuid": "7150ff6a-a411-433b-b5d1-aef7dbb47774"
+    },
+    {
+      "identity": "[\"nursing\",3,\"إدارة التمريض\"]",
+      "programId": "nursing",
+      "sourceIndex": 3,
+      "title": "إدارة التمريض",
+      "uuid": "4653d08d-a4dd-4b76-800f-91cb1b7afb8d"
+    },
+    {
+      "identity": "[\"nursing\",4,\"إدارة الموارد البشرية الصحية\"]",
+      "programId": "nursing",
+      "sourceIndex": 4,
+      "title": "إدارة الموارد البشرية الصحية",
+      "uuid": "36621601-e541-45ca-9954-1c009ac10350"
+    },
+    {
+      "identity": "[\"nursing\",5,\"نظم الخدمات الصحية\"]",
+      "programId": "nursing",
+      "sourceIndex": 5,
+      "title": "نظم الخدمات الصحية",
+      "uuid": "8929ddb7-6607-4f18-9eb8-9f643a9730e9"
+    },
+    {
+      "identity": "[\"nursing\",6,\"الجوانب القانونية والأخلاقية في إدارة التمريض\"]",
+      "programId": "nursing",
+      "sourceIndex": 6,
+      "title": "الجوانب القانونية والأخلاقية في إدارة التمريض",
+      "uuid": "8d139238-96a9-4e00-9abe-f8701996680d"
+    },
+    {
+      "identity": "[\"nursing\",7,\"نظم المعلومات الصحية\"]",
+      "programId": "nursing",
+      "sourceIndex": 7,
+      "title": "نظم المعلومات الصحية",
+      "uuid": "f5c08cdf-e012-41fa-9e92-044cd96b61c6"
+    },
+    {
+      "identity": "[\"nursing\",8,\"إدارة الجودة الشاملة في التمريض\"]",
+      "programId": "nursing",
+      "sourceIndex": 8,
+      "title": "إدارة الجودة الشاملة في التمريض",
+      "uuid": "13696047-c924-4649-a0e1-3d9753f71e77"
+    },
+    {
+      "identity": "[\"nursing\",9,\"القيادة في التمريض\"]",
+      "programId": "nursing",
+      "sourceIndex": 9,
+      "title": "القيادة في التمريض",
+      "uuid": "3ed1223a-b116-4b63-ab47-167aef1eda94"
+    },
+    {
+      "identity": "[\"nursing\",10,\"إدارة العمليات في الرعاية الصحية\"]",
+      "programId": "nursing",
+      "sourceIndex": 10,
+      "title": "إدارة العمليات في الرعاية الصحية",
+      "uuid": "322e178c-9224-4664-892b-abf0aa2a195c"
+    },
+    {
+      "identity": "[\"nursing\",11,\"إدارة المواد الصحية\"]",
+      "programId": "nursing",
+      "sourceIndex": 11,
+      "title": "إدارة المواد الصحية",
+      "uuid": "4bc33b35-d962-4e33-a2d4-24b344d6bf90"
+    },
+    {
+      "identity": "[\"nursing\",12,\"إعداد التقارير الصحية باللغة الإنجليزية\"]",
+      "programId": "nursing",
+      "sourceIndex": 12,
+      "title": "إعداد التقارير الصحية باللغة الإنجليزية",
+      "uuid": "a8976b1f-3846-4bce-9ef1-95b8d8a47853"
+    },
+    {
+      "identity": "[\"nursing\",13,\"التأمين في الرعاية الصحية\"]",
+      "programId": "nursing",
+      "sourceIndex": 13,
+      "title": "التأمين في الرعاية الصحية",
+      "uuid": "63dc119b-58e4-493e-a032-ce7ae769b991"
+    },
+    {
+      "identity": "[\"nursing\",14,\"موضوعات مختارة في إدارة التمريض\"]",
+      "programId": "nursing",
+      "sourceIndex": 14,
+      "title": "موضوعات مختارة في إدارة التمريض",
+      "uuid": "b641f66a-6a5a-498f-9739-8b82a2055159"
+    },
+    {
+      "identity": "[\"nursing\",15,\"التثقيف الصحي\"]",
+      "programId": "nursing",
+      "sourceIndex": 15,
+      "title": "التثقيف الصحي",
+      "uuid": "49d9bcee-0803-48fa-9f6f-466dffb64522"
+    },
+    {
+      "identity": "[\"cyber\",0,\"أساسيات علم التشفير\"]",
+      "programId": "cyber",
+      "sourceIndex": 0,
+      "title": "أساسيات علم التشفير",
+      "uuid": "0de46e47-1d49-4a80-9e18-299ecc87a710"
+    },
+    {
+      "identity": "[\"cyber\",1,\"البرمجة بلغة Python\"]",
+      "programId": "cyber",
+      "sourceIndex": 1,
+      "title": "البرمجة بلغة Python",
+      "uuid": "e17d2a17-f9fc-4689-900d-8d50ec6801bb"
+    },
+    {
+      "identity": "[\"cyber\",2,\"أساسيات الأمن السيبراني\"]",
+      "programId": "cyber",
+      "sourceIndex": 2,
+      "title": "أساسيات الأمن السيبراني",
+      "uuid": "44861e66-f86a-4189-b646-8185456a470c"
+    },
+    {
+      "identity": "[\"cyber\",3,\"الذكاء الاصطناعي\"]",
+      "programId": "cyber",
+      "sourceIndex": 3,
+      "title": "الذكاء الاصطناعي",
+      "uuid": "b8d3e9f1-781b-4e91-a6eb-f8479ff4ac04"
+    },
+    {
+      "identity": "[\"cyber\",4,\"الجرائم الإلكترونية\"]",
+      "programId": "cyber",
+      "sourceIndex": 4,
+      "title": "الجرائم الإلكترونية",
+      "uuid": "97d65874-58f7-4c64-8866-6080695fd8fa"
+    },
+    {
+      "identity": "[\"cyber\",5,\"الحوسبة السحابية\"]",
+      "programId": "cyber",
+      "sourceIndex": 5,
+      "title": "الحوسبة السحابية",
+      "uuid": "58409458-3b1b-436e-b595-f7f838ac3476"
+    },
+    {
+      "identity": "[\"cyber\",6,\"إدارة أمن المعلومات\"]",
+      "programId": "cyber",
+      "sourceIndex": 6,
+      "title": "إدارة أمن المعلومات",
+      "uuid": "6be21f42-3b1f-4638-b5b0-c71bb09abbf3"
+    },
+    {
+      "identity": "[\"cyber\",7,\"الاختراق الأخلاقي\"]",
+      "programId": "cyber",
+      "sourceIndex": 7,
+      "title": "الاختراق الأخلاقي",
+      "uuid": "d1b1b80b-8d9e-4699-8c4b-5e3f9034653a"
+    },
+    {
+      "identity": "[\"cyber\",8,\"مقدمة في أمن الشبكات\"]",
+      "programId": "cyber",
+      "sourceIndex": 8,
+      "title": "مقدمة في أمن الشبكات",
+      "uuid": "b10e2d20-f6a7-4afd-ab1a-67e079b42390"
+    },
+    {
+      "identity": "[\"cyber\",9,\"موضوعات مختارة في الأمن السيبراني\"]",
+      "programId": "cyber",
+      "sourceIndex": 9,
+      "title": "موضوعات مختارة في الأمن السيبراني",
+      "uuid": "2302a005-8a7f-48fa-8851-e7daeb2df57b"
+    },
+    {
+      "identity": "[\"ai\",0,\"أساسيات برمجة الحاسب\"]",
+      "programId": "ai",
+      "sourceIndex": 0,
+      "title": "أساسيات برمجة الحاسب",
+      "uuid": "c3d4147c-973a-4a0a-9a4a-feab9f31d922"
+    },
+    {
+      "identity": "[\"ai\",1,\"أساسيات الذكاء الاصطناعي\"]",
+      "programId": "ai",
+      "sourceIndex": 1,
+      "title": "أساسيات الذكاء الاصطناعي",
+      "uuid": "76c00518-7897-411d-a0e0-e4ae64a455f1"
+    },
+    {
+      "identity": "[\"ai\",2,\"البرمجة بلغة Python\"]",
+      "programId": "ai",
+      "sourceIndex": 2,
+      "title": "البرمجة بلغة Python",
+      "uuid": "cc7307c6-f282-414e-b1dc-1f1deec20e39"
+    },
+    {
+      "identity": "[\"ai\",3,\"هندسة البرمجيات\"]",
+      "programId": "ai",
+      "sourceIndex": 3,
+      "title": "هندسة البرمجيات",
+      "uuid": "b915651b-81f8-4ab3-9a7c-cb426f198c35"
+    },
+    {
+      "identity": "[\"ai\",4,\"تطبيقات تعلم الآلة\"]",
+      "programId": "ai",
+      "sourceIndex": 4,
+      "title": "تطبيقات تعلم الآلة",
+      "uuid": "fd5780ec-fd17-4d0e-84a8-26aa321e9a6c"
+    },
+    {
+      "identity": "[\"ai\",5,\"معالجة اللغة الطبيعية\"]",
+      "programId": "ai",
+      "sourceIndex": 5,
+      "title": "معالجة اللغة الطبيعية",
+      "uuid": "9b99d810-734b-49c7-972c-ffc9f465da34"
+    },
+    {
+      "identity": "[\"ai\",6,\"الرؤية الحاسوبية\"]",
+      "programId": "ai",
+      "sourceIndex": 6,
+      "title": "الرؤية الحاسوبية",
+      "uuid": "c6756654-2850-446b-906c-728cf13c73d4"
+    },
+    {
+      "identity": "[\"ai\",7,\"أساسيات الروبوت\"]",
+      "programId": "ai",
+      "sourceIndex": 7,
+      "title": "أساسيات الروبوت",
+      "uuid": "ec628cc7-1113-44c6-84ac-42852dbfcaad"
+    },
+    {
+      "identity": "[\"ai\",8,\"أنظمة تشغيل الروبوتات\"]",
+      "programId": "ai",
+      "sourceIndex": 8,
+      "title": "أنظمة تشغيل الروبوتات",
+      "uuid": "3e1423c1-427c-43f5-abf6-bdd6a10a8692"
+    },
+    {
+      "identity": "[\"ai\",9,\"برمجة الذكاء الاصطناعي\"]",
+      "programId": "ai",
+      "sourceIndex": 9,
+      "title": "برمجة الذكاء الاصطناعي",
+      "uuid": "aa571b7d-3ce4-46c3-bf02-69116c27e9c3"
+    },
+    {
+      "identity": "[\"ai\",10,\"موضوعات مختارة في الذكاء الاصطناعي\"]",
+      "programId": "ai",
+      "sourceIndex": 10,
+      "title": "موضوعات مختارة في الذكاء الاصطناعي",
+      "uuid": "e1d6b690-675b-427a-8b17-fafd3e8d3113"
+    },
+    {
+      "identity": "[\"ai\",11,\"إدارة المشاريع المعلوماتية\"]",
+      "programId": "ai",
+      "sourceIndex": 11,
+      "title": "إدارة المشاريع المعلوماتية",
+      "uuid": "ca27d11d-1c89-4e71-987e-4b10a2fcadf2"
+    },
+    {
+      "identity": "[\"ai\",12,\"ريادة الأعمال\"]",
+      "programId": "ai",
+      "sourceIndex": 12,
+      "title": "ريادة الأعمال",
+      "uuid": "333c8d54-661d-433d-b75a-3e56180ba6dc"
+    },
+    {
+      "identity": "[\"ai\",13,\"اللغة الإنجليزية\"]",
+      "programId": "ai",
+      "sourceIndex": 13,
+      "title": "اللغة الإنجليزية",
+      "uuid": "a0116174-8179-413c-b9fd-935576726ee5"
+    },
+    {
+      "identity": "[\"ai\",14,\"الرياضيات\"]",
+      "programId": "ai",
+      "sourceIndex": 14,
+      "title": "الرياضيات",
+      "uuid": "33bcd074-6a72-4220-8a8b-992721e17458"
+    },
+    {
+      "identity": "[\"ai\",15,\"مقدمة تطبيقات الحاسب\"]",
+      "programId": "ai",
+      "sourceIndex": 15,
+      "title": "مقدمة تطبيقات الحاسب",
+      "uuid": "174ffa30-a0d0-4b64-a7a8-77ce4e9e9e4e"
+    },
+    {
+      "identity": "[\"ai\",16,\"تطبيقات الحاسب المتقدمة\"]",
+      "programId": "ai",
+      "sourceIndex": 16,
+      "title": "تطبيقات الحاسب المتقدمة",
+      "uuid": "1a56313b-d153-48e3-ac2f-b42d0fc2722a"
+    },
+    {
+      "identity": "[\"ai\",17,\"مهارات التعلم\"]",
+      "programId": "ai",
+      "sourceIndex": 17,
+      "title": "مهارات التعلم",
+      "uuid": "23923942-726c-4179-b5b8-2ee93321128b"
+    },
+    {
+      "identity": "[\"ai\",18,\"الدراسات الإسلامية\"]",
+      "programId": "ai",
+      "sourceIndex": 18,
+      "title": "الدراسات الإسلامية",
+      "uuid": "db0b0287-da17-49ac-a090-a4223221b004"
+    }
+  ],
+  "careers": [
+    {
+      "identity": "[\"law\",0,\"مساعد باحث قانوني\"]",
+      "programId": "law",
+      "sourceIndex": 0,
+      "title": "مساعد باحث قانوني",
+      "uuid": "4833635b-96f7-439a-8371-aacbfe6b9053"
+    },
+    {
+      "identity": "[\"law\",1,\"مساعد محامي\"]",
+      "programId": "law",
+      "sourceIndex": 1,
+      "title": "مساعد محامي",
+      "uuid": "45dc923c-8d24-4aa1-ac72-3f58df9bed51"
+    },
+    {
+      "identity": "[\"law\",2,\"مساعد باحث قضايا\"]",
+      "programId": "law",
+      "sourceIndex": 2,
+      "title": "مساعد باحث قضايا",
+      "uuid": "f0fbbe94-096e-4956-b6f8-4e05612913ad"
+    },
+    {
+      "identity": "[\"law\",3,\"مساعد مفتش قانوني\"]",
+      "programId": "law",
+      "sourceIndex": 3,
+      "title": "مساعد مفتش قانوني",
+      "uuid": "3a0e9740-bc4b-429b-a0db-f7114fa09a63"
+    },
+    {
+      "identity": "[\"law\",4,\"مساعد مفتش إداري\"]",
+      "programId": "law",
+      "sourceIndex": 4,
+      "title": "مساعد مفتش إداري",
+      "uuid": "974b235d-a75f-4f57-9206-7713f093bb08"
+    },
+    {
+      "identity": "[\"law\",5,\"مساعد باحث أنظمة\"]",
+      "programId": "law",
+      "sourceIndex": 5,
+      "title": "مساعد باحث أنظمة",
+      "uuid": "34b06c48-bde9-43cb-8370-d608c427da18"
+    },
+    {
+      "identity": "[\"law\",6,\"سكرتير قانوني\"]",
+      "programId": "law",
+      "sourceIndex": 6,
+      "title": "سكرتير قانوني",
+      "uuid": "87c9e0c4-d3b2-4d6b-bf4e-fcebfed8c08f"
+    },
+    {
+      "identity": "[\"law\",7,\"مساعد مراقب تجاري\"]",
+      "programId": "law",
+      "sourceIndex": 7,
+      "title": "مساعد مراقب تجاري",
+      "uuid": "6132739d-2992-40b0-b416-26576f805393"
+    },
+    {
+      "identity": "[\"law\",8,\"مساعد مراقب جمركي\"]",
+      "programId": "law",
+      "sourceIndex": 8,
+      "title": "مساعد مراقب جمركي",
+      "uuid": "97cf4561-f656-4772-8600-2e60449e5649"
+    },
+    {
+      "identity": "[\"law\",9,\"مدقق جمركي\"]",
+      "programId": "law",
+      "sourceIndex": 9,
+      "title": "مدقق جمركي",
+      "uuid": "d77d05ed-7ea3-461d-ad98-663ab1f891f8"
+    },
+    {
+      "identity": "[\"law\",10,\"مدقق طلبات\"]",
+      "programId": "law",
+      "sourceIndex": 10,
+      "title": "مدقق طلبات",
+      "uuid": "06dda080-2011-4d84-8fa7-99d5ee5346f1"
+    },
+    {
+      "identity": "[\"law\",11,\"مساعد إداري\"]",
+      "programId": "law",
+      "sourceIndex": 11,
+      "title": "مساعد إداري",
+      "uuid": "b6a7125a-f3e8-46b6-835c-f8a672b6a2d4"
+    },
+    {
+      "identity": "[\"law\",12,\"كاتب\"]",
+      "programId": "law",
+      "sourceIndex": 12,
+      "title": "كاتب",
+      "uuid": "c3b5c229-c4a5-43c6-b8a3-eff73ab25b32"
+    },
+    {
+      "identity": "[\"hospital\",0,\"مساعد إداري بالمستشفيات\"]",
+      "programId": "hospital",
+      "sourceIndex": 0,
+      "title": "مساعد إداري بالمستشفيات",
+      "uuid": "2715c4a9-aeaf-4b1a-b23b-09ef0f973cc0"
+    },
+    {
+      "identity": "[\"hospital\",1,\"مساعد مفتش إداري\"]",
+      "programId": "hospital",
+      "sourceIndex": 1,
+      "title": "مساعد مفتش إداري",
+      "uuid": "fd76cf03-ae34-48f9-a4d9-2c48d85f3586"
+    },
+    {
+      "identity": "[\"hospital\",2,\"سكرتير طبي متخصص\"]",
+      "programId": "hospital",
+      "sourceIndex": 2,
+      "title": "سكرتير طبي متخصص",
+      "uuid": "c99c29fd-6383-4c10-bddf-b3274048e283"
+    },
+    {
+      "identity": "[\"hospital\",3,\"مساعد مراقب صحي\"]",
+      "programId": "hospital",
+      "sourceIndex": 3,
+      "title": "مساعد مراقب صحي",
+      "uuid": "ccffcff0-fc56-4e9d-b131-b58d2f7ed4d4"
+    },
+    {
+      "identity": "[\"hospital\",4,\"كاتب\"]",
+      "programId": "hospital",
+      "sourceIndex": 4,
+      "title": "كاتب",
+      "uuid": "d8e882fc-4747-4a3b-a5df-ef23a2d9ad69"
+    },
+    {
+      "identity": "[\"hospital\",5,\"مراقب جودة\"]",
+      "programId": "hospital",
+      "sourceIndex": 5,
+      "title": "مراقب جودة",
+      "uuid": "5b7491d2-6cf9-4a8d-b4f1-cf94682949ab"
+    },
+    {
+      "identity": "[\"hospital\",6,\"أمين مخزن بالمستشفيات\"]",
+      "programId": "hospital",
+      "sourceIndex": 6,
+      "title": "أمين مخزن بالمستشفيات",
+      "uuid": "c8f4567b-52f3-4184-9b02-51431b1ba0cd"
+    },
+    {
+      "identity": "[\"hospital\",7,\"مسؤول مشتريات بالمنظمات الصحية\"]",
+      "programId": "hospital",
+      "sourceIndex": 7,
+      "title": "مسؤول مشتريات بالمنظمات الصحية",
+      "uuid": "509de277-39ec-4d8e-9a63-259e271cdcd8"
+    },
+    {
+      "identity": "[\"hospital\",8,\"كاتب سجلات طبية\"]",
+      "programId": "hospital",
+      "sourceIndex": 8,
+      "title": "كاتب سجلات طبية",
+      "uuid": "8c1cc47d-bba0-490f-bb11-bde6493c4831"
+    },
+    {
+      "identity": "[\"hospital\",9,\"مساعد أخصائي نظم معلومات صحية\"]",
+      "programId": "hospital",
+      "sourceIndex": 9,
+      "title": "مساعد أخصائي نظم معلومات صحية",
+      "uuid": "bbbe7594-d1bb-4e45-a194-72e31ba36f94"
+    },
+    {
+      "identity": "[\"hospital\",10,\"مساعد مدرب في التخصص\"]",
+      "programId": "hospital",
+      "sourceIndex": 10,
+      "title": "مساعد مدرب في التخصص",
+      "uuid": "a0d3fbe5-7ddc-4558-b433-c906d20e4e7d"
+    },
+    {
+      "identity": "[\"nursing\",0,\"إدارة التمريض\"]",
+      "programId": "nursing",
+      "sourceIndex": 0,
+      "title": "إدارة التمريض",
+      "uuid": "2ac09be4-1da7-4525-9ba1-ffbf0ba87cac"
+    },
+    {
+      "identity": "[\"nursing\",1,\"مساعد مدير مستشفى\"]",
+      "programId": "nursing",
+      "sourceIndex": 1,
+      "title": "مساعد مدير مستشفى",
+      "uuid": "85db901c-ef11-4e59-ad0e-ccb479695455"
+    },
+    {
+      "identity": "[\"nursing\",2,\"مشرف مكتب صحي\"]",
+      "programId": "nursing",
+      "sourceIndex": 2,
+      "title": "مشرف مكتب صحي",
+      "uuid": "a1b1ccb0-7f40-4e25-9743-ae7351c1ebe5"
+    },
+    {
+      "identity": "[\"nursing\",3,\"مراقب جودة صحية\"]",
+      "programId": "nursing",
+      "sourceIndex": 3,
+      "title": "مراقب جودة صحية",
+      "uuid": "d6d6c412-e751-462e-82d8-c2f034d81319"
+    },
+    {
+      "identity": "[\"nursing\",4,\"فني خدمات صحية\"]",
+      "programId": "nursing",
+      "sourceIndex": 4,
+      "title": "فني خدمات صحية",
+      "uuid": "946cb38f-f662-48f2-b44a-47100a5e982b"
+    },
+    {
+      "identity": "[\"nursing\",5,\"مساعد إداري صحي\"]",
+      "programId": "nursing",
+      "sourceIndex": 5,
+      "title": "مساعد إداري صحي",
+      "uuid": "c5c2b382-10a7-4b03-907f-c2916eab49a9"
+    },
+    {
+      "identity": "[\"nursing\",6,\"منسق مشروع\"]",
+      "programId": "nursing",
+      "sourceIndex": 6,
+      "title": "منسق مشروع",
+      "uuid": "cea0e835-5739-4f58-91ef-5a492144bd81"
+    },
+    {
+      "identity": "[\"nursing\",7,\"سكرتير طبي\"]",
+      "programId": "nursing",
+      "sourceIndex": 7,
+      "title": "سكرتير طبي",
+      "uuid": "a53607e4-2f1f-4db4-a9c3-39fc5ef5736a"
+    },
+    {
+      "identity": "[\"nursing\",8,\"فني تثقيف صحي\"]",
+      "programId": "nursing",
+      "sourceIndex": 8,
+      "title": "فني تثقيف صحي",
+      "uuid": "146875e5-20ac-42b0-8b1a-e4adebb77d2b"
+    },
+    {
+      "identity": "[\"nursing\",9,\"مساعد مشرف تمريض\"]",
+      "programId": "nursing",
+      "sourceIndex": 9,
+      "title": "مساعد مشرف تمريض",
+      "uuid": "6dc6afae-33fd-4c25-8a32-4ece4684d6cd"
+    },
+    {
+      "identity": "[\"nursing\",10,\"مساعد شؤون التمريض\"]",
+      "programId": "nursing",
+      "sourceIndex": 10,
+      "title": "مساعد شؤون التمريض",
+      "uuid": "acf6f997-3e03-4eaf-baaa-42bf8fca4b07"
+    },
+    {
+      "identity": "[\"nursing\",11,\"مساعد إداري بمراكز صحية\"]",
+      "programId": "nursing",
+      "sourceIndex": 11,
+      "title": "مساعد إداري بمراكز صحية",
+      "uuid": "752c025c-47a8-4813-ae6c-fb146304bff3"
+    },
+    {
+      "identity": "[\"nursing\",12,\"مساعد مشرف صحي\"]",
+      "programId": "nursing",
+      "sourceIndex": 12,
+      "title": "مساعد مشرف صحي",
+      "uuid": "10911d02-5522-46c5-8d4e-745a7ac1e453"
+    },
+    {
+      "identity": "[\"nursing\",13,\"مساعد مدرب في التخصص\"]",
+      "programId": "nursing",
+      "sourceIndex": 13,
+      "title": "مساعد مدرب في التخصص",
+      "uuid": "1b8d92dc-fb89-48bd-9540-bbaaae20635f"
+    },
+    {
+      "identity": "[\"cyber\",0,\"مشرف أمن معلومات\"]",
+      "programId": "cyber",
+      "sourceIndex": 0,
+      "title": "مشرف أمن معلومات",
+      "uuid": "69cab8df-59cd-4a22-8bf8-f9b52b291ef0"
+    },
+    {
+      "identity": "[\"cyber\",1,\"مساعد مدير أمن معلومات\"]",
+      "programId": "cyber",
+      "sourceIndex": 1,
+      "title": "مساعد مدير أمن معلومات",
+      "uuid": "ee270321-6eea-4715-aa8c-2f494f36a75e"
+    },
+    {
+      "identity": "[\"cyber\",2,\"مسؤول أمن سيبراني\"]",
+      "programId": "cyber",
+      "sourceIndex": 2,
+      "title": "مسؤول أمن سيبراني",
+      "uuid": "73b7c8cd-6e8c-4c77-99d5-3301c86df87d"
+    },
+    {
+      "identity": "[\"cyber\",3,\"أخصائي أمن سيبراني\"]",
+      "programId": "cyber",
+      "sourceIndex": 3,
+      "title": "أخصائي أمن سيبراني",
+      "uuid": "3a7f6e31-1ce3-4bd8-8590-6b1e28b0fe30"
+    },
+    {
+      "identity": "[\"cyber\",4,\"محلل أمن سيبراني\"]",
+      "programId": "cyber",
+      "sourceIndex": 4,
+      "title": "محلل أمن سيبراني",
+      "uuid": "cfdfa535-c2eb-49e7-919d-e8db7571e3b5"
+    },
+    {
+      "identity": "[\"cyber\",5,\"مراقب أمني\"]",
+      "programId": "cyber",
+      "sourceIndex": 5,
+      "title": "مراقب أمني",
+      "uuid": "39b17968-6f60-47dd-aa74-4bd6412ad600"
+    },
+    {
+      "identity": "[\"cyber\",6,\"محلل البرمجيات الخبيثة\"]",
+      "programId": "cyber",
+      "sourceIndex": 6,
+      "title": "محلل البرمجيات الخبيثة",
+      "uuid": "a538f56d-258e-4e08-ba39-82d10db59880"
+    },
+    {
+      "identity": "[\"cyber\",7,\"محلل جرائم الحاسب والأدلة الجنائية\"]",
+      "programId": "cyber",
+      "sourceIndex": 7,
+      "title": "محلل جرائم الحاسب والأدلة الجنائية",
+      "uuid": "cbd4d608-e0e0-4695-8e6d-cdaa43cd08f9"
+    },
+    {
+      "identity": "[\"cyber\",8,\"مختبر اختراق الشبكات\"]",
+      "programId": "cyber",
+      "sourceIndex": 8,
+      "title": "مختبر اختراق الشبكات",
+      "uuid": "8312a2c1-40c0-42e3-a05d-7a541f5e351f"
+    },
+    {
+      "identity": "[\"cyber\",9,\"أخصائي اختبار الاختراق\"]",
+      "programId": "cyber",
+      "sourceIndex": 9,
+      "title": "أخصائي اختبار الاختراق",
+      "uuid": "bc6854a1-2e04-4704-bc05-513037afe4e7"
+    },
+    {
+      "identity": "[\"cyber\",10,\"محلل اختراقات أمنية\"]",
+      "programId": "cyber",
+      "sourceIndex": 10,
+      "title": "محلل اختراقات أمنية",
+      "uuid": "4084ff3c-91a9-48b5-8841-ccac03ae4537"
+    },
+    {
+      "identity": "[\"cyber\",11,\"أخصائي أمن معلومات تقني\"]",
+      "programId": "cyber",
+      "sourceIndex": 11,
+      "title": "أخصائي أمن معلومات تقني",
+      "uuid": "ac07cc4e-e6e3-413a-a941-87e458abe946"
+    },
+    {
+      "identity": "[\"cyber\",12,\"مساعد مدرب في التخصص\"]",
+      "programId": "cyber",
+      "sourceIndex": 12,
+      "title": "مساعد مدرب في التخصص",
+      "uuid": "6cfa546b-8e28-4db0-9cab-4aba622beb40"
+    },
+    {
+      "identity": "[\"ai\",0,\"فني ذكاء اصطناعي\"]",
+      "programId": "ai",
+      "sourceIndex": 0,
+      "title": "فني ذكاء اصطناعي",
+      "uuid": "54857d21-24ac-4bd7-bd56-02129a109d87"
+    },
+    {
+      "identity": "[\"ai\",1,\"مساعد مطور ذكاء اصطناعي\"]",
+      "programId": "ai",
+      "sourceIndex": 1,
+      "title": "مساعد مطور ذكاء اصطناعي",
+      "uuid": "2d9253b7-ce09-44fc-938f-76a26da5644f"
+    },
+    {
+      "identity": "[\"ai\",2,\"مساعد مطور Python\"]",
+      "programId": "ai",
+      "sourceIndex": 2,
+      "title": "مساعد مطور Python",
+      "uuid": "7a3fedfc-d913-4d5d-9e52-f65f1a1fcdc7"
+    },
+    {
+      "identity": "[\"ai\",3,\"مساعد مهندس تعلم آلة\"]",
+      "programId": "ai",
+      "sourceIndex": 3,
+      "title": "مساعد مهندس تعلم آلة",
+      "uuid": "bb2727fd-9c95-4594-94f5-9307d8822c39"
+    },
+    {
+      "identity": "[\"ai\",4,\"مساعد محلل بيانات\"]",
+      "programId": "ai",
+      "sourceIndex": 4,
+      "title": "مساعد محلل بيانات",
+      "uuid": "708c52cc-eecc-4e3d-879b-4183c8705842"
+    },
+    {
+      "identity": "[\"ai\",5,\"فني تحليل بيانات\"]",
+      "programId": "ai",
+      "sourceIndex": 5,
+      "title": "فني تحليل بيانات",
+      "uuid": "c89fd496-7aa5-4614-b65a-71d5d12544df"
+    },
+    {
+      "identity": "[\"ai\",6,\"مطور روبوتات مبتدئ\"]",
+      "programId": "ai",
+      "sourceIndex": 6,
+      "title": "مطور روبوتات مبتدئ",
+      "uuid": "a6c1d465-4119-4014-b636-c3e04653a3fc"
+    },
+    {
+      "identity": "[\"ai\",7,\"فني أنظمة روبوتية\"]",
+      "programId": "ai",
+      "sourceIndex": 7,
+      "title": "فني أنظمة روبوتية",
+      "uuid": "753a3332-910c-4149-8b9c-f4859054ce0a"
+    },
+    {
+      "identity": "[\"ai\",8,\"مساعد مطور رؤية حاسوبية\"]",
+      "programId": "ai",
+      "sourceIndex": 8,
+      "title": "مساعد مطور رؤية حاسوبية",
+      "uuid": "02ed6b46-6b39-4f69-bd2d-9302bdb777c5"
+    },
+    {
+      "identity": "[\"ai\",9,\"مساعد مطور معالجة لغة طبيعية\"]",
+      "programId": "ai",
+      "sourceIndex": 9,
+      "title": "مساعد مطور معالجة لغة طبيعية",
+      "uuid": "10033387-c1e3-46ff-9f43-4debf41af28c"
+    },
+    {
+      "identity": "[\"ai\",10,\"مختبر أنظمة ذكاء اصطناعي\"]",
+      "programId": "ai",
+      "sourceIndex": 10,
+      "title": "مختبر أنظمة ذكاء اصطناعي",
+      "uuid": "2cd53fa7-9d73-407d-9f02-5abc01a77001"
+    },
+    {
+      "identity": "[\"ai\",11,\"فني تشغيل وصيانة تطبيقات الذكاء الاصطناعي\"]",
+      "programId": "ai",
+      "sourceIndex": 11,
+      "title": "فني تشغيل وصيانة تطبيقات الذكاء الاصطناعي",
+      "uuid": "62d25b5b-5267-4884-8b3b-ce6075851d59"
+    },
+    {
+      "identity": "[\"ai\",12,\"منسق مشاريع تقنية أو ذكاء اصطناعي\"]",
+      "programId": "ai",
+      "sourceIndex": 12,
+      "title": "منسق مشاريع تقنية أو ذكاء اصطناعي",
+      "uuid": "52049298-f348-4c03-8583-8cbb43d313f6"
+    },
+    {
+      "identity": "[\"ai\",13,\"مدرب أو مساعد مدرب تقنيات الذكاء الاصطناعي والبرمجة\"]",
+      "programId": "ai",
+      "sourceIndex": 13,
+      "title": "مدرب أو مساعد مدرب تقنيات الذكاء الاصطناعي والبرمجة",
+      "uuid": "d88bca03-660b-4a4a-ac2f-7810583f50fd"
+    },
+    {
+      "identity": "[\"safety\",0,\"مراقب سلامة في المنشآت\"]",
+      "programId": "safety",
+      "sourceIndex": 0,
+      "title": "مراقب سلامة في المنشآت",
+      "uuid": "20102424-65ce-4e5f-9a54-fa374a7a76bc"
+    },
+    {
+      "identity": "[\"safety\",1,\"مشرف الالتزام والمطابقة\"]",
+      "programId": "safety",
+      "sourceIndex": 1,
+      "title": "مشرف الالتزام والمطابقة",
+      "uuid": "313abd74-3502-4962-b805-f1c01a74e1ca"
+    },
+    {
+      "identity": "[\"safety\",2,\"إداري بإدارة السلامة\"]",
+      "programId": "safety",
+      "sourceIndex": 2,
+      "title": "إداري بإدارة السلامة",
+      "uuid": "34940d8e-2187-4444-bb7e-f5f2f692fe02"
+    },
+    {
+      "identity": "[\"safety\",3,\"فني سلامة بالمؤسسات الإدارية\"]",
+      "programId": "safety",
+      "sourceIndex": 3,
+      "title": "فني سلامة بالمؤسسات الإدارية",
+      "uuid": "1acafd52-877f-46b8-9355-89954a850bf2"
+    },
+    {
+      "identity": "[\"safety\",4,\"مراقب بإدارة الأزمات\"]",
+      "programId": "safety",
+      "sourceIndex": 4,
+      "title": "مراقب بإدارة الأزمات",
+      "uuid": "a0ed824d-eda0-475c-81f6-915b2c72aa9b"
+    },
+    {
+      "identity": "[\"safety\",5,\"مراقب بإدارة السلامة\"]",
+      "programId": "safety",
+      "sourceIndex": 5,
+      "title": "مراقب بإدارة السلامة",
+      "uuid": "50881054-ff07-4b42-bdfa-5e41fac973fa"
+    },
+    {
+      "identity": "[\"business\",0,\"مساعد مدير\"]",
+      "programId": "business",
+      "sourceIndex": 0,
+      "title": "مساعد مدير",
+      "uuid": "50b7070d-e55e-4e30-8b82-b2fa914780ba"
+    },
+    {
+      "identity": "[\"business\",1,\"مشرف مكتب\"]",
+      "programId": "business",
+      "sourceIndex": 1,
+      "title": "مشرف مكتب",
+      "uuid": "91f69355-0da5-421e-8cb5-cc85bcf89f40"
+    },
+    {
+      "identity": "[\"business\",2,\"مراقب جودة\"]",
+      "programId": "business",
+      "sourceIndex": 2,
+      "title": "مراقب جودة",
+      "uuid": "2b1e31f7-e381-48fc-9308-875b0a649092"
+    },
+    {
+      "identity": "[\"business\",3,\"مراقب مخزون\"]",
+      "programId": "business",
+      "sourceIndex": 3,
+      "title": "مراقب مخزون",
+      "uuid": "a64617fa-d981-4c3d-be73-966be59bc059"
+    },
+    {
+      "identity": "[\"business\",4,\"مساعد إداري\"]",
+      "programId": "business",
+      "sourceIndex": 4,
+      "title": "مساعد إداري",
+      "uuid": "7d7e564e-e926-41b7-89c4-4d97d3e5efc9"
+    },
+    {
+      "identity": "[\"business\",5,\"مساعد مراقب إداري\"]",
+      "programId": "business",
+      "sourceIndex": 5,
+      "title": "مساعد مراقب إداري",
+      "uuid": "77070c28-ac82-42c2-af5f-1ec0ec71fffc"
+    },
+    {
+      "identity": "[\"business\",6,\"مندوب مشتريات\"]",
+      "programId": "business",
+      "sourceIndex": 6,
+      "title": "مندوب مشتريات",
+      "uuid": "fb226377-56ab-4c6c-aee3-fbb06baaea7d"
+    },
+    {
+      "identity": "[\"business\",7,\"منسق برامج إدارية\"]",
+      "programId": "business",
+      "sourceIndex": 7,
+      "title": "منسق برامج إدارية",
+      "uuid": "afac852b-8fa6-4538-8635-4beeb0c9d546"
+    },
+    {
+      "identity": "[\"business\",8,\"منسق مشروع\"]",
+      "programId": "business",
+      "sourceIndex": 8,
+      "title": "منسق مشروع",
+      "uuid": "cb546cef-acbd-4849-ba99-b28504bef1f0"
+    },
+    {
+      "identity": "[\"business\",9,\"سكرتير\"]",
+      "programId": "business",
+      "sourceIndex": 9,
+      "title": "سكرتير",
+      "uuid": "91c5e485-a4f0-47f9-986a-d9f66bdb5c00"
+    },
+    {
+      "identity": "[\"business\",10,\"مساعد مدرب في التخصص\"]",
+      "programId": "business",
+      "sourceIndex": 10,
+      "title": "مساعد مدرب في التخصص",
+      "uuid": "72a619ad-1117-4c93-8da9-1d6711ea4481"
+    },
+    {
+      "identity": "[\"hr\",0,\"منسق توظيف\"]",
+      "programId": "hr",
+      "sourceIndex": 0,
+      "title": "منسق توظيف",
+      "uuid": "07904610-d84b-4365-a516-2d95c3f26ae1"
+    },
+    {
+      "identity": "[\"hr\",1,\"أخصائي موارد بشرية\"]",
+      "programId": "hr",
+      "sourceIndex": 1,
+      "title": "أخصائي موارد بشرية",
+      "uuid": "e4e3610c-f1dd-4277-9899-885a9731cba3"
+    },
+    {
+      "identity": "[\"hr\",2,\"مشرف علاقات العملاء\"]",
+      "programId": "hr",
+      "sourceIndex": 2,
+      "title": "مشرف علاقات العملاء",
+      "uuid": "131c30d4-a760-470c-8bbf-ce98fc1061f9"
+    },
+    {
+      "identity": "[\"hr\",3,\"أخصائي شؤون الموظفين\"]",
+      "programId": "hr",
+      "sourceIndex": 3,
+      "title": "أخصائي شؤون الموظفين",
+      "uuid": "4c97a72a-c420-48fe-9d95-d3d2cdbf56de"
+    },
+    {
+      "identity": "[\"hr\",4,\"أخصائي تدريب\"]",
+      "programId": "hr",
+      "sourceIndex": 4,
+      "title": "أخصائي تدريب",
+      "uuid": "3f82e328-ba49-4304-a4b4-7c06335e088b"
+    },
+    {
+      "identity": "[\"hr\",5,\"أخصائي تصنيف وظائف\"]",
+      "programId": "hr",
+      "sourceIndex": 5,
+      "title": "أخصائي تصنيف وظائف",
+      "uuid": "90264e45-2039-4cbc-b40c-00df8d69cf3c"
+    },
+    {
+      "identity": "[\"hr\",6,\"مدقق رواتب\"]",
+      "programId": "hr",
+      "sourceIndex": 6,
+      "title": "مدقق رواتب",
+      "uuid": "c2891ad8-1820-4c66-a026-f9dae0aca425"
+    },
+    {
+      "identity": "[\"hr\",7,\"مراقب شؤون موظفين\"]",
+      "programId": "hr",
+      "sourceIndex": 7,
+      "title": "مراقب شؤون موظفين",
+      "uuid": "3bffaa21-79b0-44dd-a3e4-54bc404fea07"
+    },
+    {
+      "identity": "[\"hr\",8,\"مسؤول رواتب\"]",
+      "programId": "hr",
+      "sourceIndex": 8,
+      "title": "مسؤول رواتب",
+      "uuid": "477b5ebd-6968-4ae3-bb0c-26969f07e5a8"
+    },
+    {
+      "identity": "[\"hr\",9,\"مساعد مدير موارد بشرية\"]",
+      "programId": "hr",
+      "sourceIndex": 9,
+      "title": "مساعد مدير موارد بشرية",
+      "uuid": "bbf69b4e-fa25-44c0-afc3-975d1cb3d368"
+    },
+    {
+      "identity": "[\"office-diploma\",0,\"مساعد إداري\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 0,
+      "title": "مساعد إداري",
+      "uuid": "15b0ef5a-901c-42a1-ad55-45991b9de194"
+    },
+    {
+      "identity": "[\"office-diploma\",1,\"كاتب\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 1,
+      "title": "كاتب",
+      "uuid": "156d629d-55cb-4d23-a395-a2bc728d8ae6"
+    },
+    {
+      "identity": "[\"office-diploma\",2,\"سكرتير خاص\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 2,
+      "title": "سكرتير خاص",
+      "uuid": "98659d14-c1a2-4076-87bd-052b5e81d247"
+    },
+    {
+      "identity": "[\"office-diploma\",3,\"سكرتير عام\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 3,
+      "title": "سكرتير عام",
+      "uuid": "68e1e71d-233a-4a56-8e4d-fe3f0ab951c6"
+    },
+    {
+      "identity": "[\"office-diploma\",4,\"مدقق طلبات\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 4,
+      "title": "مدقق طلبات",
+      "uuid": "8a9c0881-7aa8-4bf7-aa3e-8133228f1b58"
+    },
+    {
+      "identity": "[\"office-diploma\",5,\"مندوب تعليم\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 5,
+      "title": "مندوب تعليم",
+      "uuid": "c582f985-ee4b-421a-9d99-c5372a123f5a"
+    },
+    {
+      "identity": "[\"office-diploma\",6,\"مسجل نتائج امتحانات\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 6,
+      "title": "مسجل نتائج امتحانات",
+      "uuid": "fcbf74a7-8901-46ef-a55b-43a097e44ab2"
+    },
+    {
+      "identity": "[\"office-diploma\",7,\"موثق نتائج امتحانات\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 7,
+      "title": "موثق نتائج امتحانات",
+      "uuid": "9a807e0e-9849-4315-8453-43d83b1a4d2f"
+    },
+    {
+      "identity": "[\"office-diploma\",8,\"محصل إيرادات\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 8,
+      "title": "محصل إيرادات",
+      "uuid": "93b61d28-42d2-467c-9a60-0cdac8bb29eb"
+    },
+    {
+      "identity": "[\"office-diploma\",9,\"مأمور صرف\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 9,
+      "title": "مأمور صرف",
+      "uuid": "262b9142-231d-43f7-af7d-6935fb67765c"
+    },
+    {
+      "identity": "[\"office-diploma\",10,\"أمين صندوق\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 10,
+      "title": "أمين صندوق",
+      "uuid": "bb6aa267-73df-4356-850d-0745fb90058f"
+    },
+    {
+      "identity": "[\"office-diploma\",11,\"مأمور عهد\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 11,
+      "title": "مأمور عهد",
+      "uuid": "ab4c524b-f2d0-4ff6-9afb-4fef10b4f881"
+    },
+    {
+      "identity": "[\"office-diploma\",12,\"أمين مستودع\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 12,
+      "title": "أمين مستودع",
+      "uuid": "26d79099-8217-4925-ba4a-6adf12251d3d"
+    },
+    {
+      "identity": "[\"office-diploma\",13,\"مراقب تموين\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 13,
+      "title": "مراقب تموين",
+      "uuid": "16288a33-006e-424d-91d4-c5e9bb0028e2"
+    },
+    {
+      "identity": "[\"office-diploma\",14,\"مأمور مشتريات\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 14,
+      "title": "مأمور مشتريات",
+      "uuid": "2107d90e-7877-4f18-a31e-61f370c320e1"
+    },
+    {
+      "identity": "[\"office-diploma\",15,\"مبيعات\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 15,
+      "title": "مبيعات",
+      "uuid": "d4eeb843-c202-46d5-89d7-e57f89650bad"
+    },
+    {
+      "identity": "[\"office-diploma\",16,\"مراقب عهدة\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 16,
+      "title": "مراقب عهدة",
+      "uuid": "077db0ca-319d-4466-90a5-5d98aa83ec4e"
+    },
+    {
+      "identity": "[\"office-diploma\",17,\"مراقب مخزون\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 17,
+      "title": "مراقب مخزون",
+      "uuid": "45433414-3dfc-4094-89de-ede554ec6feb"
+    },
+    {
+      "identity": "[\"office-diploma\",18,\"خدمات عامة\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 18,
+      "title": "خدمات عامة",
+      "uuid": "3e6e9159-deeb-4689-a0da-a1427ac03ffb"
+    },
+    {
+      "identity": "[\"office-diploma\",19,\"مساعد مدرب في مجال التخصص\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 19,
+      "title": "مساعد مدرب في مجال التخصص",
+      "uuid": "69766e68-6343-4593-95e0-1c7c251754ca"
+    },
+    {
+      "identity": "[\"office-diploma\",20,\"مسجل معلومات\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 20,
+      "title": "مسجل معلومات",
+      "uuid": "b8fc216c-c30b-4308-8c41-8bf060cb8592"
+    },
+    {
+      "identity": "[\"office-diploma\",21,\"مأمور استعلامات\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 21,
+      "title": "مأمور استعلامات",
+      "uuid": "065916ac-a100-41a6-b219-bc66daeee267"
+    },
+    {
+      "identity": "[\"office-diploma\",22,\"ناسخ آلة\"]",
+      "programId": "office-diploma",
+      "sourceIndex": 22,
+      "title": "ناسخ آلة",
+      "uuid": "9c0010bb-0f30-46ac-84bf-63e3d7875e86"
+    },
+    {
+      "identity": "[\"cx\",0,\"أخصائي تجربة العملاء\"]",
+      "programId": "cx",
+      "sourceIndex": 0,
+      "title": "أخصائي تجربة العملاء",
+      "uuid": "86867da1-771f-407c-9533-9ff224f6acd2"
+    },
+    {
+      "identity": "[\"cx\",1,\"منسق خدمة عملاء\"]",
+      "programId": "cx",
+      "sourceIndex": 1,
+      "title": "منسق خدمة عملاء",
+      "uuid": "7717cd22-8948-42cb-a707-5e66d3da9c0d"
+    },
+    {
+      "identity": "[\"cx\",2,\"محلل سلوك المستهلك\"]",
+      "programId": "cx",
+      "sourceIndex": 2,
+      "title": "محلل سلوك المستهلك",
+      "uuid": "2d3724c7-c446-460e-88d6-9713d17ead43"
+    },
+    {
+      "identity": "[\"cx\",3,\"أخصائي إدارة علاقات العملاء\"]",
+      "programId": "cx",
+      "sourceIndex": 3,
+      "title": "أخصائي إدارة علاقات العملاء",
+      "uuid": "db66eb1c-462e-433b-8777-32a8c423bacd"
+    },
+    {
+      "identity": "[\"cx\",4,\"متخصص التسويق الرقمي وخدمة العملاء\"]",
+      "programId": "cx",
+      "sourceIndex": 4,
+      "title": "متخصص التسويق الرقمي وخدمة العملاء",
+      "uuid": "82d1bd1e-0d62-4c36-9538-eb09487e9e9e"
+    },
+    {
+      "identity": "[\"cx\",5,\"مدير علاقات العملاء\"]",
+      "programId": "cx",
+      "sourceIndex": 5,
+      "title": "مدير علاقات العملاء",
+      "uuid": "54b18e4f-0191-4b5b-933a-70d8d28ff6e6"
+    },
+    {
+      "identity": "[\"cx\",6,\"مسؤول برامج الولاء والاحتفاظ بالعملاء\"]",
+      "programId": "cx",
+      "sourceIndex": 6,
+      "title": "مسؤول برامج الولاء والاحتفاظ بالعملاء",
+      "uuid": "8a079702-2043-41a9-96c2-8e2b6699223f"
+    },
+    {
+      "identity": "[\"cx\",7,\"منسق برامج العميل\"]",
+      "programId": "cx",
+      "sourceIndex": 7,
+      "title": "منسق برامج العميل",
+      "uuid": "d140619d-0edd-451a-9548-66a1296b5f8b"
+    },
+    {
+      "identity": "[\"cx\",8,\"مشرف خدمة عملاء\"]",
+      "programId": "cx",
+      "sourceIndex": 8,
+      "title": "مشرف خدمة عملاء",
+      "uuid": "b2b95fef-f71d-43fd-8c26-10f4d32c38db"
+    }
+  ],
+  "integritySha256": "9193fb1256b02777801cc0642a6a3ebdfd1a5050eac975e3871f6ec5e9fbf2cd"
+}

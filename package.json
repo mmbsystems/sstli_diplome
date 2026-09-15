@@ -8,11 +8,17 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
-    "add-admin": "node scripts/add-admin.mjs"
+    "add-admin": "node scripts/add-admin.mjs",
+    "bootstrap:admin": "node scripts/bootstrap-super-admin.mjs",
+    "validate:catalog": "node scripts/validate-catalog.mjs",
+    "test:db": "node scripts/test-database.mjs",
+    "check:supabase": "node scripts/check-supabase.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-slot": "^1.1.2",
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.116.0",
     "bcryptjs": "^3.0.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -23,6 +29,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "server-only": "^0.0.1",
+    "sharp": "0.35.4",
     "tailwind-merge": "^3.0.2"
   },
   "devDependencies": {

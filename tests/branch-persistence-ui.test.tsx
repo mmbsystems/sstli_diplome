@@ -1,0 +1,52 @@
+import React from 'react';
+import { afterEach, expect, it, vi } from 'vitest';
+import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { AdminProvider } from '@/components/admin/AdminProvider';
+import { BranchDetail } from '@/components/admin/Branches';
+const navigation = vi.hoisted(() => ({ replace: vi.fn(), refresh: vi.fn() }));
+vi.mock('next/navigation', () => ({ useRouter: () => navigation, usePathname: () => '/admin/branches/test', useSearchParams: () => new URLSearchParams() }));
+const branch = { id: 'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa', version: 4, legacyKey: 'الدمام::سكوير', name: 'سكوير', city: 'الدمام', address: '', active: false, directoryListed: false, archived: false, updatedAt: null };
+afterEach(() => { cleanup(); vi.unstubAllGlobals(); });
+it('creates with no supplied identity and navigates to the returned UUID', async () => {
+ const fetcher=vi.fn().mockResolvedValue({ok:true,status:200,json:async()=>({branch:{...branch,version:1,legacyKey:undefined}})});vi.stubGlobal('fetch',fetcher);
+ render(<AdminProvider initial={{programs:[],branches:[]}} userName="مدير النظام" persistentPrograms><BranchDetail id="new"/></AdminProvider>);
+ fireEvent.change(screen.getByRole('textbox',{name:'اسم الفرع'}),{target:{value:'فرع اختبار'}});
+ fireEvent.change(screen.getByRole('textbox',{name:'المدينة'}),{target:{value:'مدينة اختبار'}});
+ fireEvent.click(screen.getByRole('button',{name:'حفظ التغييرات'}));
+ await waitFor(()=>expect(navigation.replace).toHaveBeenCalledWith('/admin/branches/'+branch.id));
+ const payload=JSON.parse(fetcher.mock.calls[0][1].body);expect(payload.id).toBeUndefined();expect(payload.expectedVersion).toBe(0);expect(payload.branch.legacy_key).toBeUndefined();
+});
+it('archives and restores with returned versions and identifies the archived state',async()=>{
+ const fetcher=vi.fn().mockResolvedValueOnce({ok:true,json:async()=>({branch:{...branch,version:5,archived:true}})}).mockResolvedValueOnce({ok:true,json:async()=>({branch:{...branch,version:6,archived:false}})});vi.stubGlobal('fetch',fetcher);
+ render(<AdminProvider initial={{programs:[],branches:[branch]}} userName="مدير النظام" persistentPrograms><BranchDetail id={branch.id}/></AdminProvider>);
+ fireEvent.click(screen.getByRole('button',{name:'أرشفة الفرع'}));fireEvent.click(screen.getByRole('button',{name:'تأكيد التغيير'}));
+ await screen.findByRole('button',{name:'استعادة الفرع'});
+ expect(screen.getByLabelText('حالة سجل الفرع')).toHaveTextContent('مؤرشف');
+ expect(JSON.parse(fetcher.mock.calls[0][1].body)).toMatchObject({action:'archive',expectedVersion:4});
+ fireEvent.click(screen.getByRole('button',{name:'استعادة الفرع'}));fireEvent.click(screen.getByRole('button',{name:'تأكيد التغيير'}));
+ await screen.findByRole('button',{name:'أرشفة الفرع'});
+ expect(JSON.parse(fetcher.mock.calls[1][1].body)).toMatchObject({action:'restore',expectedVersion:5});
+});
+it.each([409, 422, 500])('keeps branch edits and expected version after HTTP %i', async status => {
+ const fetcher = vi.fn().mockResolvedValue({ ok: false, status }); vi.stubGlobal('fetch', fetcher);
+ render(<AdminProvider initial={{ programs: [], branches: [branch] }} userName="مدير النظام" persistentPrograms><BranchDetail id={branch.id}/></AdminProvider>);
+ fireEvent.change(screen.getByRole('textbox', { name: 'العنوان التفصيلي' }), { target: { value: 'تعديل غير محفوظ' } });
+ fireEvent.click(screen.getByRole('button', { name: 'حفظ التغييرات' }));
+ await screen.findByRole('alert');
+ expect(screen.getByRole('textbox', { name: 'العنوان التفصيلي' })).toHaveValue('تعديل غير محفوظ');
+ expect(screen.getByText('لديك تغييرات غير محفوظة')).toBeInTheDocument();
+ const payload = JSON.parse(fetcher.mock.calls[0][1].body);
+ expect(payload.expectedVersion).toBe(4); expect(payload.branch.legacy_key).toBeUndefined(); expect(payload.actor).toBeUndefined(); expect(payload.branch.offerings).toBeUndefined();
+});
+it('accepts the saved version and uses it on the next mutation', async () => {
+ const fetcher = vi.fn().mockResolvedValue({ ok: true, status: 200, json: async () => ({ branch: { ...branch, address: 'محفوظ', version: 5 } }) }); vi.stubGlobal('fetch', fetcher);
+ render(<AdminProvider initial={{ programs: [], branches: [branch] }} userName="مدير النظام" persistentPrograms><BranchDetail id={branch.id}/></AdminProvider>);
+ fireEvent.change(screen.getByRole('textbox', { name: 'العنوان التفصيلي' }), { target: { value: 'جديد' } });
+ fireEvent.click(screen.getByRole('button', { name: 'حفظ التغييرات' }));
+ await waitFor(() => expect(screen.getByRole('textbox', { name: 'العنوان التفصيلي' })).toHaveValue('محفوظ'));
+ fireEvent.change(screen.getByRole('textbox', { name: 'العنوان التفصيلي' }), { target: { value: 'آخر' } });
+ fireEvent.click(screen.getByRole('button', { name: 'حفظ التغييرات' }));
+ await waitFor(() => expect(fetcher).toHaveBeenCalledTimes(2));
+ expect(JSON.parse(fetcher.mock.calls[1][1].body).expectedVersion).toBe(5);
+});

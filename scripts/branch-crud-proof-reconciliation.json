@@ -1,0 +1,91 @@
+{
+  "audit": [
+    {
+      "id": "379a7bf3-0b27-48cf-9764-b5871687fcde",
+      "action": "create",
+      "branch_id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+      "actor_label": "مدير النظام",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "a5d3c092-f9e8-4b85-9328-07d83292389e"
+      },
+      "actor_user_id": null
+    },
+    {
+      "id": "f2e3705e-16a0-42a3-86ed-105e5b8dd0a2",
+      "action": "update",
+      "branch_id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+      "actor_label": "مدير النظام",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "6d305991-b834-454b-b38e-3d3ed6767070"
+      },
+      "actor_user_id": null
+    },
+    {
+      "id": "a78692a6-d77a-44c3-b719-1e6588fd72e2",
+      "action": "archive",
+      "branch_id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+      "actor_label": "مدير النظام",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "4663e8fb-b909-45c0-8bc0-77497b9f3fad"
+      },
+      "actor_user_id": null
+    },
+    {
+      "id": "348e93e8-c738-40ab-8326-82ce073dc1b9",
+      "action": "restore",
+      "branch_id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+      "actor_label": "مدير النظام",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "6714f84f-cc13-4a27-be1a-0e026df95692"
+      },
+      "actor_user_id": null
+    },
+    {
+      "id": "97d5a100-f521-4956-8a3d-66b0b634e76f",
+      "action": "archive",
+      "branch_id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+      "actor_label": "مدير النظام",
+      "legacy_actor": {
+        "name": "مدير النظام",
+        "role": "super_admin",
+        "username": "admin",
+        "request_id": "1a1cd820-eb00-4339-b2d8-0bdd16817b8d"
+      },
+      "actor_user_id": null
+    }
+  ],
+  "branches": 17,
+  "branch_fk": "FOREIGN KEY (branch_id) REFERENCES branches(id) ON DELETE RESTRICT",
+  "offerings": 83,
+  "offerings_md5": "83ed00c75cd6e94ce6731d6c25a8522f",
+  "audit_immutable": true,
+  "linked_offerings": 0,
+  "verification_branch": {
+    "id": "9c1f613d-e255-4fbd-8e4b-796fa5ab8870",
+    "city": "مدينة اختبار غير تجارية cf1ede3a-8dee-4443-988d-a385392070f6",
+    "name": "فرع اختبار CRUD - مؤقت - لا يستخدم",
+    "address": "بيانات تحقق محدثة؛ لا يستخدم للعمل",
+    "version": 5,
+    "is_active": false,
+    "created_at": "2026-09-13T11:44:46.379252+00:00",
+    "legacy_key": null,
+    "updated_at": "2026-09-13T11:45:13.302161+00:00",
+    "archived_at": "2026-09-13T11:45:13.301216+00:00",
+    "directory_listed": false,
+    "source_region_label": "منطقة اختبار غير تجارية"
+  },
+  "original_branches_md5": "7adaf9020f7de78115706456ee459c48",
+  "original_business_branches": 16
+}

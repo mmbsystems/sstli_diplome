@@ -1,0 +1,26 @@
+{
+  "phase": "C",
+  "verifiedAt": "2026-09-13T21:59:42.958Z",
+  "anonymous": "activity/users redirected to login",
+  "staff": "actual login with spoofed role/actor; activity/users denied",
+  "admin": "actual legacy login; hosted activity/users and activity RSC 200",
+  "pagination": {
+    "pages": 2,
+    "auditRows": 33,
+    "duplicateRows": 0
+  },
+  "counts": {
+    "programs": 53,
+    "branches": 17,
+    "program_offerings": 83,
+    "curriculum_items": 80,
+    "career_paths": 124,
+    "activity_logs": 33
+  },
+  "auditHash": "fcf388559bdf38367efe157ad06873bf5f73c11c55cf25f53ff71c7ca0b064bc",
+  "hostedRowsUnchanged": true,
+  "legacyConfigUnchanged": true,
+  "responsesScanned": 11,
+  "secretHits": 0,
+  "mutations": 0
+}
